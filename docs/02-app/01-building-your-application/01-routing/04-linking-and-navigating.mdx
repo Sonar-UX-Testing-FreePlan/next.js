@@ -77,29 +77,15 @@ async function fetchTeam(id: string) {
   return res.json()
 }
 
-export default async function Profile({ params }: { params: { id: string } }) {
-  const team = await fetchTeam(params.id)
-  if (!team) {
+export default async function Profile({ params }: { params: Promise<{ id: string }> }) {
+  const id = await params?.id
+  if (!id) {
     redirect('/login')
   }
 
-  // ...
-}
-```
-
-```jsx filename="app/team/[id]/page.js" switcher
-import { redirect } from 'next/navigation'
-
-async function fetchTeam(id) {
-  const res = await fetch('https://...')
-  if (!res.ok) return undefined
-  return res.json()
-}
-
-export default async function Profile({ params }) {
-  const team = await fetchTeam(params.id)
+  const team = await fetchTeam(id)
   if (!team) {
-    redirect('/login')
+    redirect('/join')
   }
 
   // ...
