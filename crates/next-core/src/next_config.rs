@@ -861,6 +861,16 @@ impl NextConfig {
     }
 
     #[turbo_tasks::function]
+    pub fn is_standalone(&self) -> Vc<bool> {
+        Vc::cell(self.output == Some(OutputType::Standalone))
+    }
+
+    #[turbo_tasks::function]
+    pub fn cache_handler(&self) -> Vc<Option<RcStr>> {
+        Vc::cell(self.cache_handler.clone())
+    }
+
+    #[turbo_tasks::function]
     pub fn compiler(&self) -> Vc<CompilerConfig> {
         self.compiler.clone().unwrap_or_default().cell()
     }
@@ -1178,7 +1188,7 @@ impl NextConfig {
     #[turbo_tasks::function]
     pub fn tree_shaking_mode_for_foreign_code(
         &self,
-        is_development: bool,
+        _is_development: bool,
     ) -> Vc<OptionTreeShaking> {
         let tree_shaking = self
             .experimental
@@ -1190,18 +1200,18 @@ impl NextConfig {
             Some(false) => Some(TreeShakingMode::ReexportsOnly),
             Some(true) => Some(TreeShakingMode::ModuleFragments),
             None => {
-                if is_development {
-                    Some(TreeShakingMode::ReexportsOnly)
-                } else {
-                    Some(TreeShakingMode::ModuleFragments)
-                }
+                // if is_development {
+                Some(TreeShakingMode::ReexportsOnly)
+                // } else {
+                //     Some(TreeShakingMode::ModuleFragments)
+                // }
             }
         })
         .cell()
     }
 
     #[turbo_tasks::function]
-    pub fn tree_shaking_mode_for_user_code(&self, is_development: bool) -> Vc<OptionTreeShaking> {
+    pub fn tree_shaking_mode_for_user_code(&self, _is_development: bool) -> Vc<OptionTreeShaking> {
         let tree_shaking = self
             .experimental
             .turbo
@@ -1212,11 +1222,11 @@ impl NextConfig {
             Some(false) => Some(TreeShakingMode::ReexportsOnly),
             Some(true) => Some(TreeShakingMode::ModuleFragments),
             None => {
-                if is_development {
-                    Some(TreeShakingMode::ReexportsOnly)
-                } else {
-                    Some(TreeShakingMode::ModuleFragments)
-                }
+                // if is_development {
+                Some(TreeShakingMode::ReexportsOnly)
+                // } else {
+                //     Some(TreeShakingMode::ModuleFragments)
+                // }
             }
         })
         .cell()
