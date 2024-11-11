@@ -80,16 +80,14 @@ graph TD
 # Final
 ```mermaid
 graph TD
-    N0["Items: [ItemId(ModuleEvaluation)]"];
-    N1["Items: [ItemId(0, ImportOfModule)]"];
-    N2["Items: [ItemId(1, Normal)]"];
+    N0["Items: [ItemId(ModuleEvaluation), ItemId(0, ImportOfModule), ItemId(0, ImportBinding(0)), ItemId(1, Normal)]"];
 ```
 # Entrypoints
 
 ```
 {
     ModuleEvaluation: 0,
-    Exports: 3,
+    Exports: 1,
 }
 ```
 
@@ -98,27 +96,31 @@ graph TD
 ## Part 0
 ```js
 "module evaluation";
-
-```
-## Part 1
-```js
 import './module';
-
-```
-## Part 2
-```js
+import { baz } from './module';
 if (1 + 1 == 3) {
     baz();
 }
+export { baz as a } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
 
 ```
-## Part 3
+## Part 1
 ```js
 
 ```
 ## Merged (module eval)
 ```js
+import './module';
+import { baz } from './module';
 "module evaluation";
+if (1 + 1 == 3) {
+    baz();
+}
+export { baz as a } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
 
 ```
 # Entrypoints
@@ -126,7 +128,7 @@ if (1 + 1 == 3) {
 ```
 {
     ModuleEvaluation: 0,
-    Exports: 3,
+    Exports: 1,
 }
 ```
 
@@ -135,26 +137,30 @@ if (1 + 1 == 3) {
 ## Part 0
 ```js
 "module evaluation";
-
-```
-## Part 1
-```js
 import './module';
-
-```
-## Part 2
-```js
+import { baz } from './module';
 if (1 + 1 == 3) {
     baz();
 }
+export { baz as a } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
 
 ```
-## Part 3
+## Part 1
 ```js
 
 ```
 ## Merged (module eval)
 ```js
+import './module';
+import { baz } from './module';
 "module evaluation";
+if (1 + 1 == 3) {
+    baz();
+}
+export { baz as a } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
 
 ```

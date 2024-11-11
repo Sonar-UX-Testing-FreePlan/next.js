@@ -411,16 +411,9 @@ graph TD
 ```mermaid
 graph TD
     N0["Items: [ItemId(ModuleEvaluation)]"];
-    N1["Items: [ItemId(Export((&quot;NextResponse&quot;, #2), &quot;NextResponse&quot;))]"];
-    N2["Items: [ItemId(5, VarDeclarator(0))]"];
+    N1["Items: [ItemId(Export((&quot;NextResponse&quot;, #2), &quot;NextResponse&quot;)), ItemId(0, ImportBinding(0)), ItemId(1, ImportBinding(0)), ItemId(2, ImportBinding(0)), ItemId(2, ImportBinding(1)), ItemId(3, ImportBinding(0)), ItemId(4, ImportBinding(0)), ItemId(7, Normal), ItemId(8, Normal)]"];
+    N2["Items: [ItemId(0, ImportOfModule), ItemId(1, ImportOfModule), ItemId(2, ImportOfModule), ItemId(3, ImportOfModule), ItemId(4, ImportOfModule), ItemId(5, VarDeclarator(0))]"];
     N3["Items: [ItemId(6, VarDeclarator(0))]"];
-    N4["Items: [ItemId(0, ImportOfModule)]"];
-    N5["Items: [ItemId(1, ImportOfModule)]"];
-    N6["Items: [ItemId(2, ImportOfModule)]"];
-    N7["Items: [ItemId(3, ImportOfModule)]"];
-    N8["Items: [ItemId(4, ImportOfModule)]"];
-    N9["Items: [ItemId(7, Normal)]"];
-    N10["Items: [ItemId(8, Normal)]"];
     N1 --> N3;
     N3 --> N2;
     N1 --> N2;
@@ -434,7 +427,7 @@ graph TD
     Export(
         "NextResponse",
     ): 1,
-    Exports: 11,
+    Exports: 4,
 }
 ```
 
@@ -450,70 +443,19 @@ import "__TURBOPACK_PART__" assert {
 ```
 ## Part 1
 ```js
-import { a as NextResponse } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -10
+import { a as INTERNALS } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -2
 };
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 2
+import { b as REDIRECTS } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -3
 };
 export { NextResponse };
-
-```
-## Part 2
-```js
-const INTERNALS = Symbol('internal response');
-export { INTERNALS as b } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 3
-```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 2
-};
-const REDIRECTS = new Set([
-    301,
-    302,
-    303,
-    307,
-    308
-]);
-export { REDIRECTS as c } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 4
-```js
-import '../../web/spec-extension/cookies';
-
-```
-## Part 5
-```js
-import '../next-url';
-
-```
-## Part 6
-```js
-import '../utils';
-
-```
-## Part 7
-```js
-import './adapters/reflect';
-
-```
-## Part 8
-```js
-import './cookies';
-
-```
-## Part 9
-```js
+import { stringifyCookie } from '../../web/spec-extension/cookies';
+import { NextURL } from '../next-url';
+import { toNodeOutgoingHttpHeaders } from '../utils';
+import { validateURL } from '../utils';
+import { ReflectAdapter } from './adapters/reflect';
+import { ResponseCookies } from './cookies';
 function handleMiddlewareField(init, headers) {
     var _init_request;
     if (init == null ? void 0 : (_init_request = init.request) == null ? void 0 : _init_request.headers) {
@@ -528,22 +470,6 @@ function handleMiddlewareField(init, headers) {
         headers.set('x-middleware-override-headers', keys.join(','));
     }
 }
-export { handleMiddlewareField as d } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 10
-```js
-import { d as handleMiddlewareField } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -9
-};
-import { b as INTERNALS } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -2
-};
-import { c as REDIRECTS } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -3
-};
 class NextResponse extends Response {
     constructor(body, init = {}){
         super(body, init);
@@ -632,12 +558,63 @@ class NextResponse extends Response {
         });
     }
 }
-export { NextResponse as a } from "__TURBOPACK_VAR__" assert {
+export { stringifyCookie as c } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { NextURL as d } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { toNodeOutgoingHttpHeaders as e } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { validateURL as f } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { ReflectAdapter as g } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { ResponseCookies as h } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { handleMiddlewareField as i } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { NextResponse as j } from "__TURBOPACK_VAR__" assert {
     __turbopack_var__: true
 };
 
 ```
-## Part 11
+## Part 2
+```js
+import '../../web/spec-extension/cookies';
+import '../next-url';
+import '../utils';
+import './adapters/reflect';
+import './cookies';
+const INTERNALS = Symbol('internal response');
+export { INTERNALS as a } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 3
+```js
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 2
+};
+const REDIRECTS = new Set([
+    301,
+    302,
+    303,
+    307,
+    308
+]);
+export { REDIRECTS as b } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 4
 ```js
 export { NextResponse } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: "export NextResponse"
@@ -660,7 +637,7 @@ import "__TURBOPACK_PART__" assert {
     Export(
         "NextResponse",
     ): 1,
-    Exports: 11,
+    Exports: 4,
 }
 ```
 
@@ -676,70 +653,19 @@ import "__TURBOPACK_PART__" assert {
 ```
 ## Part 1
 ```js
-import { a as NextResponse } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -10
+import { a as INTERNALS } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -2
 };
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 2
+import { b as REDIRECTS } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -3
 };
 export { NextResponse };
-
-```
-## Part 2
-```js
-const INTERNALS = Symbol('internal response');
-export { INTERNALS as b } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 3
-```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 2
-};
-const REDIRECTS = new Set([
-    301,
-    302,
-    303,
-    307,
-    308
-]);
-export { REDIRECTS as c } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 4
-```js
-import '../../web/spec-extension/cookies';
-
-```
-## Part 5
-```js
-import '../next-url';
-
-```
-## Part 6
-```js
-import '../utils';
-
-```
-## Part 7
-```js
-import './adapters/reflect';
-
-```
-## Part 8
-```js
-import './cookies';
-
-```
-## Part 9
-```js
+import { stringifyCookie } from '../../web/spec-extension/cookies';
+import { NextURL } from '../next-url';
+import { toNodeOutgoingHttpHeaders } from '../utils';
+import { validateURL } from '../utils';
+import { ReflectAdapter } from './adapters/reflect';
+import { ResponseCookies } from './cookies';
 function handleMiddlewareField(init, headers) {
     var _init_request;
     if (init == null ? void 0 : (_init_request = init.request) == null ? void 0 : _init_request.headers) {
@@ -754,22 +680,6 @@ function handleMiddlewareField(init, headers) {
         headers.set('x-middleware-override-headers', keys.join(','));
     }
 }
-export { handleMiddlewareField as d } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 10
-```js
-import { d as handleMiddlewareField } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -9
-};
-import { b as INTERNALS } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -2
-};
-import { c as REDIRECTS } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -3
-};
 class NextResponse extends Response {
     constructor(body, init = {}){
         super(body, init);
@@ -858,12 +768,63 @@ class NextResponse extends Response {
         });
     }
 }
-export { NextResponse as a } from "__TURBOPACK_VAR__" assert {
+export { stringifyCookie as c } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { NextURL as d } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { toNodeOutgoingHttpHeaders as e } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { validateURL as f } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { ReflectAdapter as g } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { ResponseCookies as h } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { handleMiddlewareField as i } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { NextResponse as j } from "__TURBOPACK_VAR__" assert {
     __turbopack_var__: true
 };
 
 ```
-## Part 11
+## Part 2
+```js
+import '../../web/spec-extension/cookies';
+import '../next-url';
+import '../utils';
+import './adapters/reflect';
+import './cookies';
+const INTERNALS = Symbol('internal response');
+export { INTERNALS as a } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 3
+```js
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 2
+};
+const REDIRECTS = new Set([
+    301,
+    302,
+    303,
+    307,
+    308
+]);
+export { REDIRECTS as b } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 4
 ```js
 export { NextResponse } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: "export NextResponse"

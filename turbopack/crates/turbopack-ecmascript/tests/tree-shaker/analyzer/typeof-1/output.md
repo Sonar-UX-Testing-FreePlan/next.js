@@ -161,19 +161,15 @@ graph TD
 # Final
 ```mermaid
 graph TD
-    N0["Items: [ItemId(ModuleEvaluation)]"];
-    N1["Items: [ItemId(Export((&quot;GET&quot;, #2), &quot;GET&quot;))]"];
-    N2["Items: [ItemId(0, ImportOfModule)]"];
-    N3["Items: [ItemId(1, ImportOfModule)]"];
-    N4["Items: [ItemId(2, ImportOfModule)]"];
-    N5["Items: [ItemId(3, Normal)]"];
+    N0["Items: [ItemId(ModuleEvaluation), ItemId(0, ImportOfModule), ItemId(1, ImportOfModule), ItemId(2, ImportOfModule)]"];
+    N1["Items: [ItemId(Export((&quot;GET&quot;, #2), &quot;GET&quot;)), ItemId(0, ImportBinding(0)), ItemId(1, ImportBinding(0)), ItemId(2, ImportBinding(0)), ItemId(3, Normal)]"];
 ```
 # Entrypoints
 
 ```
 {
     ModuleEvaluation: 0,
-    Exports: 6,
+    Exports: 2,
     Export(
         "GET",
     ): 1,
@@ -185,45 +181,38 @@ graph TD
 ## Part 0
 ```js
 "module evaluation";
+import 'next/server';
+import '../../ClientComponent';
+import 'my-module/MyModuleClientComponent';
 
 ```
 ## Part 1
 ```js
-import { a as GET } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -5
-};
 export { GET };
-
-```
-## Part 2
-```js
-import 'next/server';
-
-```
-## Part 3
-```js
-import '../../ClientComponent';
-
-```
-## Part 4
-```js
-import 'my-module/MyModuleClientComponent';
-
-```
-## Part 5
-```js
+import { NextResponse } from 'next/server';
+import { ClientComponent } from '../../ClientComponent';
+import { MyModuleClientComponent } from 'my-module/MyModuleClientComponent';
 function GET() {
     return NextResponse.json({
         clientComponent: typeof ClientComponent,
         myModuleClientComponent: typeof MyModuleClientComponent
     });
 }
-export { GET as a } from "__TURBOPACK_VAR__" assert {
+export { NextResponse as a } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { ClientComponent as b } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { MyModuleClientComponent as c } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { GET as d } from "__TURBOPACK_VAR__" assert {
     __turbopack_var__: true
 };
 
 ```
-## Part 6
+## Part 2
 ```js
 export { GET } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: "export GET"
@@ -232,6 +221,9 @@ export { GET } from "__TURBOPACK_PART__" assert {
 ```
 ## Merged (module eval)
 ```js
+import 'next/server';
+import '../../ClientComponent';
+import 'my-module/MyModuleClientComponent';
 "module evaluation";
 
 ```
@@ -240,7 +232,7 @@ export { GET } from "__TURBOPACK_PART__" assert {
 ```
 {
     ModuleEvaluation: 0,
-    Exports: 6,
+    Exports: 2,
     Export(
         "GET",
     ): 1,
@@ -252,45 +244,38 @@ export { GET } from "__TURBOPACK_PART__" assert {
 ## Part 0
 ```js
 "module evaluation";
+import 'next/server';
+import '../../ClientComponent';
+import 'my-module/MyModuleClientComponent';
 
 ```
 ## Part 1
 ```js
-import { a as GET } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -5
-};
 export { GET };
-
-```
-## Part 2
-```js
-import 'next/server';
-
-```
-## Part 3
-```js
-import '../../ClientComponent';
-
-```
-## Part 4
-```js
-import 'my-module/MyModuleClientComponent';
-
-```
-## Part 5
-```js
+import { NextResponse } from 'next/server';
+import { ClientComponent } from '../../ClientComponent';
+import { MyModuleClientComponent } from 'my-module/MyModuleClientComponent';
 function GET() {
     return NextResponse.json({
         clientComponent: typeof ClientComponent,
         myModuleClientComponent: typeof MyModuleClientComponent
     });
 }
-export { GET as a } from "__TURBOPACK_VAR__" assert {
+export { NextResponse as a } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { ClientComponent as b } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { MyModuleClientComponent as c } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { GET as d } from "__TURBOPACK_VAR__" assert {
     __turbopack_var__: true
 };
 
 ```
-## Part 6
+## Part 2
 ```js
 export { GET } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: "export GET"
@@ -299,6 +284,9 @@ export { GET } from "__TURBOPACK_PART__" assert {
 ```
 ## Merged (module eval)
 ```js
+import 'next/server';
+import '../../ClientComponent';
+import 'my-module/MyModuleClientComponent';
 "module evaluation";
 
 ```

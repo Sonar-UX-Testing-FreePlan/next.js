@@ -69,9 +69,8 @@ graph TD
 # Final
 ```mermaid
 graph TD
-    N0["Items: [ItemId(ModuleEvaluation)]"];
-    N1["Items: [ItemId(Export((&quot;__TURBOPACK__reexport__cat__&quot;, #3), &quot;fakeCat&quot;))]"];
-    N2["Items: [ItemId(0, ImportOfModule)]"];
+    N0["Items: [ItemId(ModuleEvaluation), ItemId(0, ImportOfModule)]"];
+    N1["Items: [ItemId(Export((&quot;__TURBOPACK__reexport__cat__&quot;, #3), &quot;fakeCat&quot;)), ItemId(0, ImportBinding(0))]"];
 ```
 # Entrypoints
 
@@ -81,7 +80,7 @@ graph TD
     Export(
         "fakeCat",
     ): 1,
-    Exports: 3,
+    Exports: 2,
 }
 ```
 
@@ -90,19 +89,19 @@ graph TD
 ## Part 0
 ```js
 "module evaluation";
+import "./lib";
 
 ```
 ## Part 1
 ```js
 export { __TURBOPACK__reexport__cat__ as fakeCat };
+import { cat as __TURBOPACK__reexport__cat__ } from "./lib";
+export { __TURBOPACK__reexport__cat__ as a } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
 
 ```
 ## Part 2
-```js
-import "./lib";
-
-```
-## Part 3
 ```js
 export { fakeCat } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: "export fakeCat"
@@ -111,6 +110,7 @@ export { fakeCat } from "__TURBOPACK_PART__" assert {
 ```
 ## Merged (module eval)
 ```js
+import "./lib";
 "module evaluation";
 
 ```
@@ -122,7 +122,7 @@ export { fakeCat } from "__TURBOPACK_PART__" assert {
     Export(
         "fakeCat",
     ): 1,
-    Exports: 3,
+    Exports: 2,
 }
 ```
 
@@ -131,19 +131,19 @@ export { fakeCat } from "__TURBOPACK_PART__" assert {
 ## Part 0
 ```js
 "module evaluation";
+import "./lib";
 
 ```
 ## Part 1
 ```js
 export { __TURBOPACK__reexport__cat__ as fakeCat };
+import { cat as __TURBOPACK__reexport__cat__ } from "./lib";
+export { __TURBOPACK__reexport__cat__ as a } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
 
 ```
 ## Part 2
-```js
-import "./lib";
-
-```
-## Part 3
 ```js
 export { fakeCat } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: "export fakeCat"
@@ -152,6 +152,7 @@ export { fakeCat } from "__TURBOPACK_PART__" assert {
 ```
 ## Merged (module eval)
 ```js
+import "./lib";
 "module evaluation";
 
 ```

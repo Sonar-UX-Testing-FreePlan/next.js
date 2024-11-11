@@ -685,73 +685,67 @@ graph TD
     N10["Items: [ItemId(Export((&quot;unstable_getStaticParams&quot;, #2), &quot;unstable_getStaticParams&quot;))]"];
     N11["Items: [ItemId(Export((&quot;unstable_getStaticPaths&quot;, #2), &quot;unstable_getStaticPaths&quot;))]"];
     N12["Items: [ItemId(Export((&quot;unstable_getStaticProps&quot;, #2), &quot;unstable_getStaticProps&quot;))]"];
-    N13["Items: [ItemId(2, ImportBinding(0))]"];
-    N14["Items: [ItemId(5, ImportBinding(0))]"];
-    N15["Items: [ItemId(6, Normal)]"];
-    N16["Items: [ItemId(7, VarDeclarator(0))]"];
-    N17["Items: [ItemId(8, VarDeclarator(0))]"];
-    N18["Items: [ItemId(9, VarDeclarator(0))]"];
-    N19["Items: [ItemId(10, VarDeclarator(0))]"];
-    N20["Items: [ItemId(11, VarDeclarator(0))]"];
-    N21["Items: [ItemId(12, VarDeclarator(0))]"];
-    N22["Items: [ItemId(13, VarDeclarator(0))]"];
-    N23["Items: [ItemId(14, VarDeclarator(0))]"];
-    N24["Items: [ItemId(15, VarDeclarator(0))]"];
-    N25["Items: [ItemId(16, VarDeclarator(0))]"];
-    N26["Items: [ItemId(17, VarDeclarator(0))]"];
-    N27["Items: [ItemId(0, ImportOfModule)]"];
-    N28["Items: [ItemId(1, ImportOfModule)]"];
-    N29["Items: [ItemId(2, ImportOfModule)]"];
-    N30["Items: [ItemId(3, ImportOfModule)]"];
-    N31["Items: [ItemId(4, ImportOfModule)]"];
-    N32["Items: [ItemId(5, ImportOfModule)]"];
-    N11 --> N22;
-    N10 --> N23;
-    N9 --> N25;
-    N8 --> N24;
-    N0 --> N26;
-    N15 --> N13;
-    N15 --> N14;
-    N7 --> N26;
-    N16 --> N13;
-    N16 --> N14;
-    N16 --> N15;
-    N17 --> N13;
-    N17 --> N14;
+    N13["Items: [ItemId(0, ImportOfModule), ItemId(1, ImportOfModule), ItemId(2, ImportOfModule), ItemId(3, ImportOfModule), ItemId(4, ImportOfModule), ItemId(5, ImportOfModule), ItemId(6, Normal)]"];
+    N14["Items: [ItemId(0, ImportBinding(0)), ItemId(1, ImportBinding(0)), ItemId(3, ImportBinding(0)), ItemId(4, ImportBinding(0)), ItemId(17, VarDeclarator(0))]"];
+    N15["Items: [ItemId(2, ImportBinding(0))]"];
+    N16["Items: [ItemId(5, ImportBinding(0))]"];
+    N17["Items: [ItemId(7, VarDeclarator(0))]"];
+    N18["Items: [ItemId(8, VarDeclarator(0))]"];
+    N19["Items: [ItemId(9, VarDeclarator(0))]"];
+    N20["Items: [ItemId(10, VarDeclarator(0))]"];
+    N21["Items: [ItemId(11, VarDeclarator(0))]"];
+    N22["Items: [ItemId(12, VarDeclarator(0))]"];
+    N23["Items: [ItemId(13, VarDeclarator(0))]"];
+    N24["Items: [ItemId(14, VarDeclarator(0))]"];
+    N25["Items: [ItemId(15, VarDeclarator(0))]"];
+    N26["Items: [ItemId(16, VarDeclarator(0))]"];
+    N11 --> N23;
+    N10 --> N24;
+    N9 --> N26;
+    N8 --> N25;
+    N0 --> N14;
+    N13 --> N15;
+    N13 --> N16;
+    N7 --> N14;
+    N17 --> N15;
     N17 --> N16;
-    N18 --> N13;
-    N18 --> N14;
+    N17 --> N13;
+    N18 --> N15;
+    N18 --> N16;
     N18 --> N17;
-    N19 --> N13;
-    N19 --> N14;
+    N19 --> N15;
+    N19 --> N16;
     N19 --> N18;
-    N20 --> N13;
-    N20 --> N14;
+    N20 --> N15;
+    N20 --> N16;
     N20 --> N19;
-    N21 --> N13;
-    N21 --> N14;
+    N21 --> N15;
+    N21 --> N16;
     N21 --> N20;
-    N22 --> N13;
-    N22 --> N14;
+    N22 --> N15;
+    N22 --> N16;
     N22 --> N21;
-    N23 --> N13;
-    N23 --> N14;
+    N23 --> N15;
+    N23 --> N16;
     N23 --> N22;
-    N24 --> N13;
-    N24 --> N14;
+    N24 --> N15;
+    N24 --> N16;
     N24 --> N23;
-    N25 --> N13;
-    N25 --> N14;
+    N25 --> N15;
+    N25 --> N16;
     N25 --> N24;
-    N12 --> N21;
-    N6 --> N20;
-    N2 --> N19;
-    N3 --> N18;
-    N26 --> N14;
+    N26 --> N15;
+    N26 --> N16;
     N26 --> N25;
-    N1 --> N15;
-    N5 --> N16;
-    N4 --> N17;
+    N12 --> N22;
+    N6 --> N21;
+    N2 --> N20;
+    N3 --> N19;
+    N14 --> N16;
+    N14 --> N26;
+    N1 --> N13;
+    N5 --> N17;
+    N4 --> N18;
 ```
 # Entrypoints
 
@@ -785,7 +779,7 @@ graph TD
     Export(
         "unstable_getStaticProps",
     ): 12,
-    Exports: 33,
+    Exports: 27,
     Export(
         "default",
     ): 1,
@@ -803,7 +797,7 @@ graph TD
 ## Part 0
 ```js
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 26
+    __turbopack_part__: 14
 };
 "module evaluation";
 
@@ -811,7 +805,7 @@ import "__TURBOPACK_PART__" assert {
 ## Part 1
 ```js
 import { a as __TURBOPACK__default__export__ } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -15
+    __turbopack_part__: -13
 };
 export { __TURBOPACK__default__export__ as default };
 
@@ -819,7 +813,7 @@ export { __TURBOPACK__default__export__ as default };
 ## Part 2
 ```js
 import { b as config } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -19
+    __turbopack_part__: -20
 };
 export { config };
 
@@ -827,7 +821,7 @@ export { config };
 ## Part 3
 ```js
 import { c as getServerSideProps } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -18
+    __turbopack_part__: -19
 };
 export { getServerSideProps };
 
@@ -835,7 +829,7 @@ export { getServerSideProps };
 ## Part 4
 ```js
 import { d as getStaticPaths } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -17
+    __turbopack_part__: -18
 };
 export { getStaticPaths };
 
@@ -843,7 +837,7 @@ export { getStaticPaths };
 ## Part 5
 ```js
 import { e as getStaticProps } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -16
+    __turbopack_part__: -17
 };
 export { getStaticProps };
 
@@ -851,290 +845,95 @@ export { getStaticProps };
 ## Part 6
 ```js
 import { f as reportWebVitals } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -20
+    __turbopack_part__: -21
 };
 export { reportWebVitals };
 
 ```
 ## Part 7
 ```js
-import { g as routeModule } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -26
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -14
 };
+import { PagesRouteModule } from '../../server/future/route-modules/pages/module.compiled';
 export { routeModule };
 
 ```
 ## Part 8
 ```js
-import { h as unstable_getServerProps } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -24
+import { g as unstable_getServerProps } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -25
 };
 export { unstable_getServerProps };
 
 ```
 ## Part 9
 ```js
-import { i as unstable_getServerSideProps } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -25
+import { h as unstable_getServerSideProps } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -26
 };
 export { unstable_getServerSideProps };
 
 ```
 ## Part 10
 ```js
-import { j as unstable_getStaticParams } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -23
+import { i as unstable_getStaticParams } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -24
 };
 export { unstable_getStaticParams };
 
 ```
 ## Part 11
 ```js
-import { k as unstable_getStaticPaths } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -22
+import { j as unstable_getStaticPaths } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -23
 };
 export { unstable_getStaticPaths };
 
 ```
 ## Part 12
 ```js
-import { l as unstable_getStaticProps } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -21
+import { k as unstable_getStaticProps } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -22
 };
 export { unstable_getStaticProps };
 
 ```
 ## Part 13
 ```js
-import { hoist } from './helpers';
-export { hoist as m } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 14
-```js
-import * as userland from 'VAR_USERLAND';
-export { userland as n } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 15
-```js
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -13
+    __turbopack_part__: -15
 };
 import { hoist } from './helpers';
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -14
+    __turbopack_part__: -16
 };
 import * as userland from 'VAR_USERLAND';
+import '../../server/future/route-modules/pages/module.compiled';
+import '../../server/future/route-kind';
+import './helpers';
+import 'VAR_MODULE_DOCUMENT';
+import 'VAR_MODULE_APP';
+import 'VAR_USERLAND';
 const __TURBOPACK__default__export__ = hoist(userland, 'default');
 export { __TURBOPACK__default__export__ as a } from "__TURBOPACK_VAR__" assert {
     __turbopack_var__: true
 };
 
 ```
-## Part 16
+## Part 14
 ```js
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -13
-};
-import { hoist } from './helpers';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -14
+    __turbopack_part__: -16
 };
 import * as userland from 'VAR_USERLAND';
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 15
+    __turbopack_part__: 26
 };
-const getStaticProps = hoist(userland, 'getStaticProps');
-export { getStaticProps as e } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 17
-```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -13
-};
-import { hoist } from './helpers';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -14
-};
-import * as userland from 'VAR_USERLAND';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 16
-};
-const getStaticPaths = hoist(userland, 'getStaticPaths');
-export { getStaticPaths as d } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 18
-```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -13
-};
-import { hoist } from './helpers';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -14
-};
-import * as userland from 'VAR_USERLAND';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 17
-};
-const getServerSideProps = hoist(userland, 'getServerSideProps');
-export { getServerSideProps as c } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 19
-```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -13
-};
-import { hoist } from './helpers';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -14
-};
-import * as userland from 'VAR_USERLAND';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 18
-};
-const config = hoist(userland, 'config');
-export { config as b } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 20
-```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -13
-};
-import { hoist } from './helpers';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -14
-};
-import * as userland from 'VAR_USERLAND';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 19
-};
-const reportWebVitals = hoist(userland, 'reportWebVitals');
-export { reportWebVitals as f } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 21
-```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -13
-};
-import { hoist } from './helpers';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -14
-};
-import * as userland from 'VAR_USERLAND';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 20
-};
-const unstable_getStaticProps = hoist(userland, 'unstable_getStaticProps');
-export { unstable_getStaticProps as l } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 22
-```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -13
-};
-import { hoist } from './helpers';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -14
-};
-import * as userland from 'VAR_USERLAND';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 21
-};
-const unstable_getStaticPaths = hoist(userland, 'unstable_getStaticPaths');
-export { unstable_getStaticPaths as k } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 23
-```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -13
-};
-import { hoist } from './helpers';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -14
-};
-import * as userland from 'VAR_USERLAND';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 22
-};
-const unstable_getStaticParams = hoist(userland, 'unstable_getStaticParams');
-export { unstable_getStaticParams as j } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 24
-```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -13
-};
-import { hoist } from './helpers';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -14
-};
-import * as userland from 'VAR_USERLAND';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 23
-};
-const unstable_getServerProps = hoist(userland, 'unstable_getServerProps');
-export { unstable_getServerProps as h } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 25
-```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -13
-};
-import { hoist } from './helpers';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -14
-};
-import * as userland from 'VAR_USERLAND';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 24
-};
-const unstable_getServerSideProps = hoist(userland, 'unstable_getServerSideProps');
-export { unstable_getServerSideProps as i } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 26
-```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -14
-};
-import * as userland from 'VAR_USERLAND';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 25
-};
+import { PagesRouteModule } from '../../server/future/route-modules/pages/module.compiled';
+import { RouteKind } from '../../server/future/route-kind';
+import Document from 'VAR_MODULE_DOCUMENT';
+import App from 'VAR_MODULE_APP';
 const routeModule = new PagesRouteModule({
     definition: {
         kind: RouteKind.PAGES,
@@ -1149,42 +948,230 @@ const routeModule = new PagesRouteModule({
     },
     userland
 });
-export { routeModule as g } from "__TURBOPACK_VAR__" assert {
+export { PagesRouteModule as l } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { RouteKind as m } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { Document as n } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { App as o } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { routeModule as p } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 15
+```js
+import { hoist } from './helpers';
+export { hoist as q } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 16
+```js
+import * as userland from 'VAR_USERLAND';
+export { userland as r } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 17
+```js
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -15
+};
+import { hoist } from './helpers';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -16
+};
+import * as userland from 'VAR_USERLAND';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 13
+};
+const getStaticProps = hoist(userland, 'getStaticProps');
+export { getStaticProps as e } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 18
+```js
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -15
+};
+import { hoist } from './helpers';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -16
+};
+import * as userland from 'VAR_USERLAND';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 17
+};
+const getStaticPaths = hoist(userland, 'getStaticPaths');
+export { getStaticPaths as d } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 19
+```js
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -15
+};
+import { hoist } from './helpers';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -16
+};
+import * as userland from 'VAR_USERLAND';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 18
+};
+const getServerSideProps = hoist(userland, 'getServerSideProps');
+export { getServerSideProps as c } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 20
+```js
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -15
+};
+import { hoist } from './helpers';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -16
+};
+import * as userland from 'VAR_USERLAND';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 19
+};
+const config = hoist(userland, 'config');
+export { config as b } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 21
+```js
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -15
+};
+import { hoist } from './helpers';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -16
+};
+import * as userland from 'VAR_USERLAND';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 20
+};
+const reportWebVitals = hoist(userland, 'reportWebVitals');
+export { reportWebVitals as f } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 22
+```js
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -15
+};
+import { hoist } from './helpers';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -16
+};
+import * as userland from 'VAR_USERLAND';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 21
+};
+const unstable_getStaticProps = hoist(userland, 'unstable_getStaticProps');
+export { unstable_getStaticProps as k } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 23
+```js
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -15
+};
+import { hoist } from './helpers';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -16
+};
+import * as userland from 'VAR_USERLAND';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 22
+};
+const unstable_getStaticPaths = hoist(userland, 'unstable_getStaticPaths');
+export { unstable_getStaticPaths as j } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 24
+```js
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -15
+};
+import { hoist } from './helpers';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -16
+};
+import * as userland from 'VAR_USERLAND';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 23
+};
+const unstable_getStaticParams = hoist(userland, 'unstable_getStaticParams');
+export { unstable_getStaticParams as i } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 25
+```js
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -15
+};
+import { hoist } from './helpers';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -16
+};
+import * as userland from 'VAR_USERLAND';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 24
+};
+const unstable_getServerProps = hoist(userland, 'unstable_getServerProps');
+export { unstable_getServerProps as g } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 26
+```js
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -15
+};
+import { hoist } from './helpers';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -16
+};
+import * as userland from 'VAR_USERLAND';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 25
+};
+const unstable_getServerSideProps = hoist(userland, 'unstable_getServerSideProps');
+export { unstable_getServerSideProps as h } from "__TURBOPACK_VAR__" assert {
     __turbopack_var__: true
 };
 
 ```
 ## Part 27
-```js
-import '../../server/future/route-modules/pages/module.compiled';
-
-```
-## Part 28
-```js
-import '../../server/future/route-kind';
-
-```
-## Part 29
-```js
-import './helpers';
-
-```
-## Part 30
-```js
-import 'VAR_MODULE_DOCUMENT';
-
-```
-## Part 31
-```js
-import 'VAR_MODULE_APP';
-
-```
-## Part 32
-```js
-import 'VAR_USERLAND';
-
-```
-## Part 33
 ```js
 export { default } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: "export default"
@@ -1227,7 +1214,7 @@ export { unstable_getStaticProps } from "__TURBOPACK_PART__" assert {
 ## Merged (module eval)
 ```js
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 26
+    __turbopack_part__: 14
 };
 "module evaluation";
 
@@ -1264,7 +1251,7 @@ import "__TURBOPACK_PART__" assert {
     Export(
         "unstable_getStaticProps",
     ): 12,
-    Exports: 33,
+    Exports: 27,
     Export(
         "default",
     ): 1,
@@ -1282,7 +1269,7 @@ import "__TURBOPACK_PART__" assert {
 ## Part 0
 ```js
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 26
+    __turbopack_part__: 14
 };
 "module evaluation";
 
@@ -1290,7 +1277,7 @@ import "__TURBOPACK_PART__" assert {
 ## Part 1
 ```js
 import { a as __TURBOPACK__default__export__ } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -15
+    __turbopack_part__: -13
 };
 export { __TURBOPACK__default__export__ as default };
 
@@ -1298,7 +1285,7 @@ export { __TURBOPACK__default__export__ as default };
 ## Part 2
 ```js
 import { b as config } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -19
+    __turbopack_part__: -20
 };
 export { config };
 
@@ -1306,7 +1293,7 @@ export { config };
 ## Part 3
 ```js
 import { c as getServerSideProps } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -18
+    __turbopack_part__: -19
 };
 export { getServerSideProps };
 
@@ -1314,7 +1301,7 @@ export { getServerSideProps };
 ## Part 4
 ```js
 import { d as getStaticPaths } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -17
+    __turbopack_part__: -18
 };
 export { getStaticPaths };
 
@@ -1322,7 +1309,7 @@ export { getStaticPaths };
 ## Part 5
 ```js
 import { e as getStaticProps } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -16
+    __turbopack_part__: -17
 };
 export { getStaticProps };
 
@@ -1330,290 +1317,95 @@ export { getStaticProps };
 ## Part 6
 ```js
 import { f as reportWebVitals } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -20
+    __turbopack_part__: -21
 };
 export { reportWebVitals };
 
 ```
 ## Part 7
 ```js
-import { g as routeModule } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -26
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -14
 };
+import { PagesRouteModule } from '../../server/future/route-modules/pages/module.compiled';
 export { routeModule };
 
 ```
 ## Part 8
 ```js
-import { h as unstable_getServerProps } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -24
+import { g as unstable_getServerProps } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -25
 };
 export { unstable_getServerProps };
 
 ```
 ## Part 9
 ```js
-import { i as unstable_getServerSideProps } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -25
+import { h as unstable_getServerSideProps } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -26
 };
 export { unstable_getServerSideProps };
 
 ```
 ## Part 10
 ```js
-import { j as unstable_getStaticParams } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -23
+import { i as unstable_getStaticParams } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -24
 };
 export { unstable_getStaticParams };
 
 ```
 ## Part 11
 ```js
-import { k as unstable_getStaticPaths } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -22
+import { j as unstable_getStaticPaths } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -23
 };
 export { unstable_getStaticPaths };
 
 ```
 ## Part 12
 ```js
-import { l as unstable_getStaticProps } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -21
+import { k as unstable_getStaticProps } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -22
 };
 export { unstable_getStaticProps };
 
 ```
 ## Part 13
 ```js
-import { hoist } from './helpers';
-export { hoist as m } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 14
-```js
-import * as userland from 'VAR_USERLAND';
-export { userland as n } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 15
-```js
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -13
+    __turbopack_part__: -15
 };
 import { hoist } from './helpers';
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -14
+    __turbopack_part__: -16
 };
 import * as userland from 'VAR_USERLAND';
+import '../../server/future/route-modules/pages/module.compiled';
+import '../../server/future/route-kind';
+import './helpers';
+import 'VAR_MODULE_DOCUMENT';
+import 'VAR_MODULE_APP';
+import 'VAR_USERLAND';
 const __TURBOPACK__default__export__ = hoist(userland, 'default');
 export { __TURBOPACK__default__export__ as a } from "__TURBOPACK_VAR__" assert {
     __turbopack_var__: true
 };
 
 ```
-## Part 16
+## Part 14
 ```js
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -13
-};
-import { hoist } from './helpers';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -14
+    __turbopack_part__: -16
 };
 import * as userland from 'VAR_USERLAND';
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 15
+    __turbopack_part__: 26
 };
-const getStaticProps = hoist(userland, 'getStaticProps');
-export { getStaticProps as e } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 17
-```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -13
-};
-import { hoist } from './helpers';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -14
-};
-import * as userland from 'VAR_USERLAND';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 16
-};
-const getStaticPaths = hoist(userland, 'getStaticPaths');
-export { getStaticPaths as d } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 18
-```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -13
-};
-import { hoist } from './helpers';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -14
-};
-import * as userland from 'VAR_USERLAND';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 17
-};
-const getServerSideProps = hoist(userland, 'getServerSideProps');
-export { getServerSideProps as c } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 19
-```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -13
-};
-import { hoist } from './helpers';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -14
-};
-import * as userland from 'VAR_USERLAND';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 18
-};
-const config = hoist(userland, 'config');
-export { config as b } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 20
-```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -13
-};
-import { hoist } from './helpers';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -14
-};
-import * as userland from 'VAR_USERLAND';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 19
-};
-const reportWebVitals = hoist(userland, 'reportWebVitals');
-export { reportWebVitals as f } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 21
-```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -13
-};
-import { hoist } from './helpers';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -14
-};
-import * as userland from 'VAR_USERLAND';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 20
-};
-const unstable_getStaticProps = hoist(userland, 'unstable_getStaticProps');
-export { unstable_getStaticProps as l } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 22
-```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -13
-};
-import { hoist } from './helpers';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -14
-};
-import * as userland from 'VAR_USERLAND';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 21
-};
-const unstable_getStaticPaths = hoist(userland, 'unstable_getStaticPaths');
-export { unstable_getStaticPaths as k } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 23
-```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -13
-};
-import { hoist } from './helpers';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -14
-};
-import * as userland from 'VAR_USERLAND';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 22
-};
-const unstable_getStaticParams = hoist(userland, 'unstable_getStaticParams');
-export { unstable_getStaticParams as j } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 24
-```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -13
-};
-import { hoist } from './helpers';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -14
-};
-import * as userland from 'VAR_USERLAND';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 23
-};
-const unstable_getServerProps = hoist(userland, 'unstable_getServerProps');
-export { unstable_getServerProps as h } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 25
-```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -13
-};
-import { hoist } from './helpers';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -14
-};
-import * as userland from 'VAR_USERLAND';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 24
-};
-const unstable_getServerSideProps = hoist(userland, 'unstable_getServerSideProps');
-export { unstable_getServerSideProps as i } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 26
-```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -14
-};
-import * as userland from 'VAR_USERLAND';
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 25
-};
+import { PagesRouteModule } from '../../server/future/route-modules/pages/module.compiled';
+import { RouteKind } from '../../server/future/route-kind';
+import Document from 'VAR_MODULE_DOCUMENT';
+import App from 'VAR_MODULE_APP';
 const routeModule = new PagesRouteModule({
     definition: {
         kind: RouteKind.PAGES,
@@ -1628,42 +1420,230 @@ const routeModule = new PagesRouteModule({
     },
     userland
 });
-export { routeModule as g } from "__TURBOPACK_VAR__" assert {
+export { PagesRouteModule as l } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { RouteKind as m } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { Document as n } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { App as o } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { routeModule as p } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 15
+```js
+import { hoist } from './helpers';
+export { hoist as q } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 16
+```js
+import * as userland from 'VAR_USERLAND';
+export { userland as r } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 17
+```js
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -15
+};
+import { hoist } from './helpers';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -16
+};
+import * as userland from 'VAR_USERLAND';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 13
+};
+const getStaticProps = hoist(userland, 'getStaticProps');
+export { getStaticProps as e } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 18
+```js
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -15
+};
+import { hoist } from './helpers';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -16
+};
+import * as userland from 'VAR_USERLAND';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 17
+};
+const getStaticPaths = hoist(userland, 'getStaticPaths');
+export { getStaticPaths as d } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 19
+```js
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -15
+};
+import { hoist } from './helpers';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -16
+};
+import * as userland from 'VAR_USERLAND';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 18
+};
+const getServerSideProps = hoist(userland, 'getServerSideProps');
+export { getServerSideProps as c } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 20
+```js
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -15
+};
+import { hoist } from './helpers';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -16
+};
+import * as userland from 'VAR_USERLAND';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 19
+};
+const config = hoist(userland, 'config');
+export { config as b } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 21
+```js
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -15
+};
+import { hoist } from './helpers';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -16
+};
+import * as userland from 'VAR_USERLAND';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 20
+};
+const reportWebVitals = hoist(userland, 'reportWebVitals');
+export { reportWebVitals as f } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 22
+```js
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -15
+};
+import { hoist } from './helpers';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -16
+};
+import * as userland from 'VAR_USERLAND';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 21
+};
+const unstable_getStaticProps = hoist(userland, 'unstable_getStaticProps');
+export { unstable_getStaticProps as k } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 23
+```js
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -15
+};
+import { hoist } from './helpers';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -16
+};
+import * as userland from 'VAR_USERLAND';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 22
+};
+const unstable_getStaticPaths = hoist(userland, 'unstable_getStaticPaths');
+export { unstable_getStaticPaths as j } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 24
+```js
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -15
+};
+import { hoist } from './helpers';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -16
+};
+import * as userland from 'VAR_USERLAND';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 23
+};
+const unstable_getStaticParams = hoist(userland, 'unstable_getStaticParams');
+export { unstable_getStaticParams as i } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 25
+```js
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -15
+};
+import { hoist } from './helpers';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -16
+};
+import * as userland from 'VAR_USERLAND';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 24
+};
+const unstable_getServerProps = hoist(userland, 'unstable_getServerProps');
+export { unstable_getServerProps as g } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 26
+```js
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -15
+};
+import { hoist } from './helpers';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -16
+};
+import * as userland from 'VAR_USERLAND';
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 25
+};
+const unstable_getServerSideProps = hoist(userland, 'unstable_getServerSideProps');
+export { unstable_getServerSideProps as h } from "__TURBOPACK_VAR__" assert {
     __turbopack_var__: true
 };
 
 ```
 ## Part 27
-```js
-import '../../server/future/route-modules/pages/module.compiled';
-
-```
-## Part 28
-```js
-import '../../server/future/route-kind';
-
-```
-## Part 29
-```js
-import './helpers';
-
-```
-## Part 30
-```js
-import 'VAR_MODULE_DOCUMENT';
-
-```
-## Part 31
-```js
-import 'VAR_MODULE_APP';
-
-```
-## Part 32
-```js
-import 'VAR_USERLAND';
-
-```
-## Part 33
 ```js
 export { default } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: "export default"
@@ -1706,7 +1686,7 @@ export { unstable_getStaticProps } from "__TURBOPACK_PART__" assert {
 ## Merged (module eval)
 ```js
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 26
+    __turbopack_part__: 14
 };
 "module evaluation";
 

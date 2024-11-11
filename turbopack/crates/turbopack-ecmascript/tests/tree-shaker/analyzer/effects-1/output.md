@@ -321,19 +321,14 @@ graph TD
 graph TD
     N0["Items: [ItemId(ModuleEvaluation)]"];
     N1["Items: [ItemId(0, VarDeclarator(0))]"];
-    N2["Items: [ItemId(2, Normal)]"];
+    N2["Items: [ItemId(1, Normal), ItemId(2, Normal)]"];
     N3["Items: [ItemId(3, Normal)]"];
     N4["Items: [ItemId(4, Normal)]"];
     N5["Items: [ItemId(5, VarDeclarator(0))]"];
     N6["Items: [ItemId(6, VarDeclarator(0))]"];
-    N7["Items: [ItemId(9, Normal)]"];
+    N7["Items: [ItemId(7, Normal), ItemId(8, Normal), ItemId(9, Normal)]"];
     N8["Items: [ItemId(10, Normal)]"];
-    N9["Items: [ItemId(13, Normal)]"];
-    N10["Items: [ItemId(1, Normal)]"];
-    N11["Items: [ItemId(7, Normal)]"];
-    N12["Items: [ItemId(8, Normal)]"];
-    N13["Items: [ItemId(11, VarDeclarator(0))]"];
-    N14["Items: [ItemId(12, Normal)]"];
+    N9["Items: [ItemId(11, VarDeclarator(0)), ItemId(12, Normal), ItemId(13, Normal)]"];
     N7 -.-> N5;
     N2 --> N1;
     N8 --> N2;
@@ -359,7 +354,7 @@ graph TD
 ```
 {
     ModuleEvaluation: 0,
-    Exports: 15,
+    Exports: 10,
 }
 ```
 
@@ -386,6 +381,7 @@ export { x as a } from "__TURBOPACK_VAR__" assert {
 import { a as x } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -1
 };
+console.log(x);
 console.log(x);
 
 ```
@@ -441,15 +437,17 @@ export { z as c } from "__TURBOPACK_VAR__" assert {
 ```
 ## Part 7
 ```js
+import { b as y } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -5
+};
+import { c as z } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -6
+};
 import { a as x } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -1
 };
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 5
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 6
-};
+x = y + z;
+x = x + 1;
 x *= 2;
 
 ```
@@ -478,62 +476,15 @@ import "__TURBOPACK_PART__" assert {
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 8
 };
-x = 100;
-
-```
-## Part 10
-```js
-import { a as x } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -1
-};
-console.log(x);
-
-```
-## Part 11
-```js
-import { b as y } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -5
-};
-import { c as z } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -6
-};
-import { a as x } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -1
-};
-x = y + z;
-
-```
-## Part 12
-```js
-import { a as x } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -1
-};
-x = x + 1;
-
-```
-## Part 13
-```js
-import { a as x } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -1
-};
 let a = x;
+x = x + a + 5;
+x = 100;
 export { a as d } from "__TURBOPACK_VAR__" assert {
     __turbopack_var__: true
 };
 
 ```
-## Part 14
-```js
-import { a as x } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -1
-};
-import { d as a } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -13
-};
-x = x + a + 5;
-
-```
-## Part 15
+## Part 10
 ```js
 
 ```
@@ -550,7 +501,7 @@ import "__TURBOPACK_PART__" assert {
 ```
 {
     ModuleEvaluation: 0,
-    Exports: 15,
+    Exports: 7,
 }
 ```
 
@@ -558,13 +509,16 @@ import "__TURBOPACK_PART__" assert {
 # Modules (prod)
 ## Part 0
 ```js
+import { a as x } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -1
+};
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 4
 };
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 1
-};
 "module evaluation";
+console.log(x);
+console.log(x);
+console.log(x);
 
 ```
 ## Part 1
@@ -596,7 +550,17 @@ x = 2;
 import { a as x } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -1
 };
+let y = x;
+let z = x;
+x = y + z;
+x = x + 1;
 x *= 2;
+export { y as b } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { z as c } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
 
 ```
 ## Part 5
@@ -604,13 +568,14 @@ x *= 2;
 import { a as x } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -1
 };
-import { b as a } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -14
-};
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 4
 };
+let a = x;
 x = x + a + 5;
+export { a as d } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
 
 ```
 ## Part 6
@@ -623,95 +588,19 @@ x = 100;
 ```
 ## Part 7
 ```js
-import { a as x } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -1
-};
-console.log(x);
-
-```
-## Part 8
-```js
-import { a as x } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -1
-};
-console.log(x);
-
-```
-## Part 9
-```js
-import { a as x } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -1
-};
-let y = x;
-export { y as c } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 10
-```js
-import { a as x } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -1
-};
-let z = x;
-export { z as d } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 11
-```js
-import { c as y } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -9
-};
-import { d as z } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -10
-};
-import { a as x } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -1
-};
-x = y + z;
-
-```
-## Part 12
-```js
-import { a as x } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -1
-};
-x = x + 1;
-
-```
-## Part 13
-```js
-import { a as x } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -1
-};
-console.log(x);
-
-```
-## Part 14
-```js
-import { a as x } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -1
-};
-let a = x;
-export { a as b } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 15
-```js
 
 ```
 ## Merged (module eval)
 ```js
+import { a as x } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -1
+};
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 4
 };
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 1
-};
 "module evaluation";
+console.log(x);
+console.log(x);
+console.log(x);
 
 ```

@@ -102,12 +102,9 @@ graph TD
 # Final
 ```mermaid
 graph TD
-    N0["Items: [ItemId(ModuleEvaluation)]"];
-    N1["Items: [ItemId(Export((&quot;effect&quot;, #2), &quot;effect&quot;))]"];
+    N0["Items: [ItemId(ModuleEvaluation), ItemId(0, Normal)]"];
+    N1["Items: [ItemId(Export((&quot;effect&quot;, #2), &quot;effect&quot;)), ItemId(Export((&quot;effects&quot;, #2), &quot;effects&quot;)), ItemId(2, Normal)]"];
     N2["Items: [ItemId(1, VarDeclarator(0))]"];
-    N3["Items: [ItemId(0, Normal)]"];
-    N4["Items: [ItemId(2, Normal)]"];
-    N5["Items: [ItemId(Export((&quot;effects&quot;, #2), &quot;effects&quot;))]"];
     N1 --> N2;
 ```
 # Entrypoints
@@ -118,10 +115,10 @@ graph TD
     Export(
         "effect",
     ): 1,
-    Exports: 6,
+    Exports: 3,
     Export(
         "effects",
-    ): 5,
+    ): 1,
 }
 ```
 
@@ -130,54 +127,33 @@ graph TD
 ## Part 0
 ```js
 "module evaluation";
+await Promise.resolve();
 
 ```
 ## Part 1
 ```js
-import { a as effect } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -4
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 2
+import { a as effects } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -2
 };
 export { effect };
+export { effects };
+function effect(name) {
+    effects.push(name);
+}
+export { effect as b } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
 
 ```
 ## Part 2
 ```js
 const effects = [];
-export { effects as b } from "__TURBOPACK_VAR__" assert {
+export { effects as a } from "__TURBOPACK_VAR__" assert {
     __turbopack_var__: true
 };
 
 ```
 ## Part 3
-```js
-await Promise.resolve();
-
-```
-## Part 4
-```js
-import { b as effects } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -2
-};
-function effect(name) {
-    effects.push(name);
-}
-export { effect as a } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 5
-```js
-import { b as effects } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -2
-};
-export { effects };
-
-```
-## Part 6
 ```js
 export { effect } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: "export effect"
@@ -190,6 +166,7 @@ export { effects } from "__TURBOPACK_PART__" assert {
 ## Merged (module eval)
 ```js
 "module evaluation";
+await Promise.resolve();
 
 ```
 # Entrypoints
@@ -200,7 +177,7 @@ export { effects } from "__TURBOPACK_PART__" assert {
     Export(
         "effect",
     ): 1,
-    Exports: 6,
+    Exports: 4,
     Export(
         "effects",
     ): 2,
@@ -212,22 +189,26 @@ export { effects } from "__TURBOPACK_PART__" assert {
 ## Part 0
 ```js
 "module evaluation";
+await Promise.resolve();
 
 ```
 ## Part 1
 ```js
-import { a as effect } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -5
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
+import { a as effects } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -3
 };
 export { effect };
+function effect(name) {
+    effects.push(name);
+}
+export { effect as b } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
 
 ```
 ## Part 2
 ```js
-import { b as effects } from "__TURBOPACK_PART__" assert {
+import { a as effects } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -3
 };
 export { effects };
@@ -236,30 +217,12 @@ export { effects };
 ## Part 3
 ```js
 const effects = [];
-export { effects as b } from "__TURBOPACK_VAR__" assert {
+export { effects as a } from "__TURBOPACK_VAR__" assert {
     __turbopack_var__: true
 };
 
 ```
 ## Part 4
-```js
-await Promise.resolve();
-
-```
-## Part 5
-```js
-import { b as effects } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -3
-};
-function effect(name) {
-    effects.push(name);
-}
-export { effect as a } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 6
 ```js
 export { effect } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: "export effect"
@@ -272,5 +235,6 @@ export { effects } from "__TURBOPACK_PART__" assert {
 ## Merged (module eval)
 ```js
 "module evaluation";
+await Promise.resolve();
 
 ```

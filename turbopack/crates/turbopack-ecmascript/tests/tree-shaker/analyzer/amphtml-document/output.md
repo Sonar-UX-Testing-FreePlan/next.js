@@ -278,10 +278,7 @@ graph TD
 graph TD
     N0["Items: [ItemId(ModuleEvaluation)]"];
     N1["Items: [ItemId(Export((&quot;__TURBOPACK__default__export__&quot;, #5), &quot;default&quot;))]"];
-    N2["Items: [ItemId(3, Normal)]"];
-    N3["Items: [ItemId(0, ImportOfModule)]"];
-    N4["Items: [ItemId(1, ImportOfModule)]"];
-    N5["Items: [ItemId(2, Normal)]"];
+    N2["Items: [ItemId(0, ImportOfModule), ItemId(0, ImportBinding(0)), ItemId(0, ImportBinding(1)), ItemId(0, ImportBinding(2)), ItemId(1, ImportOfModule), ItemId(1, ImportBinding(0)), ItemId(1, ImportBinding(1)), ItemId(1, ImportBinding(2)), ItemId(1, ImportBinding(3)), ItemId(1, ImportBinding(4)), ItemId(2, Normal), ItemId(3, Normal)]"];
     N0 --> N2;
     N1 --> N2;
 ```
@@ -293,7 +290,7 @@ graph TD
     Export(
         "default",
     ): 1,
-    Exports: 6,
+    Exports: 3,
 }
 ```
 
@@ -309,35 +306,25 @@ import "__TURBOPACK_PART__" assert {
 ```
 ## Part 1
 ```js
-import { a as __TURBOPACK__default__export__ } from "__TURBOPACK_PART__" assert {
+import "__TURBOPACK_PART__" assert {
     __turbopack_part__: -2
 };
+import { jsx as _jsx } from "react/jsx-runtime";
 export { __TURBOPACK__default__export__ as default };
 
 ```
 ## Part 2
 ```js
-import { b as MyDocument } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -5
-};
-const __TURBOPACK__default__export__ = MyDocument;
-export { __TURBOPACK__default__export__ as a } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 3
-```js
 import "react/jsx-runtime";
-
-```
-## Part 4
-```js
+import { jsx as _jsx } from "react/jsx-runtime";
+import { jsxs as _jsxs } from "react/jsx-runtime";
+import { Fragment as _Fragment } from "react/jsx-runtime";
 import 'next/document';
-
-```
-## Part 5
-```js
+import Document from 'next/document';
+import { Html } from 'next/document';
+import { Head } from 'next/document';
+import { Main } from 'next/document';
+import { NextScript } from 'next/document';
 class MyDocument extends Document {
     static async getInitialProps(ctx) {
         const initialProps = await Document.getInitialProps(ctx);
@@ -369,12 +356,40 @@ class MyDocument extends Document {
         });
     }
 }
-export { MyDocument as b } from "__TURBOPACK_VAR__" assert {
+const __TURBOPACK__default__export__ = MyDocument;
+export { _jsx as a } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { _jsxs as b } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { _Fragment as c } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { Document as d } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { Html as e } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { Head as f } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { Main as g } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { NextScript as h } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { MyDocument as i } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { __TURBOPACK__default__export__ as j } from "__TURBOPACK_VAR__" assert {
     __turbopack_var__: true
 };
 
 ```
-## Part 6
+## Part 3
 ```js
 export { default } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: "export default"
@@ -397,7 +412,7 @@ import "__TURBOPACK_PART__" assert {
     Export(
         "default",
     ): 1,
-    Exports: 6,
+    Exports: 3,
 }
 ```
 
@@ -413,35 +428,25 @@ import "__TURBOPACK_PART__" assert {
 ```
 ## Part 1
 ```js
-import { a as __TURBOPACK__default__export__ } from "__TURBOPACK_PART__" assert {
+import "__TURBOPACK_PART__" assert {
     __turbopack_part__: -2
 };
+import { jsx as _jsx } from "react/jsx-runtime";
 export { __TURBOPACK__default__export__ as default };
 
 ```
 ## Part 2
 ```js
-import { b as MyDocument } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -5
-};
-const __TURBOPACK__default__export__ = MyDocument;
-export { __TURBOPACK__default__export__ as a } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 3
-```js
 import "react/jsx-runtime";
-
-```
-## Part 4
-```js
+import { jsx as _jsx } from "react/jsx-runtime";
+import { jsxs as _jsxs } from "react/jsx-runtime";
+import { Fragment as _Fragment } from "react/jsx-runtime";
 import 'next/document';
-
-```
-## Part 5
-```js
+import Document from 'next/document';
+import { Html } from 'next/document';
+import { Head } from 'next/document';
+import { Main } from 'next/document';
+import { NextScript } from 'next/document';
 class MyDocument extends Document {
     static async getInitialProps(ctx) {
         const initialProps = await Document.getInitialProps(ctx);
@@ -473,12 +478,40 @@ class MyDocument extends Document {
         });
     }
 }
-export { MyDocument as b } from "__TURBOPACK_VAR__" assert {
+const __TURBOPACK__default__export__ = MyDocument;
+export { _jsx as a } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { _jsxs as b } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { _Fragment as c } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { Document as d } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { Html as e } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { Head as f } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { Main as g } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { NextScript as h } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { MyDocument as i } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { __TURBOPACK__default__export__ as j } from "__TURBOPACK_VAR__" assert {
     __turbopack_var__: true
 };
 
 ```
-## Part 6
+## Part 3
 ```js
 export { default } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: "export default"

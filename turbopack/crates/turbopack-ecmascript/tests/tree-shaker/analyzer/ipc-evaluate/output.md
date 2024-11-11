@@ -218,10 +218,7 @@ graph TD
 graph TD
     N0["Items: [ItemId(ModuleEvaluation)]"];
     N1["Items: [ItemId(Export((&quot;run&quot;, #2), &quot;run&quot;))]"];
-    N2["Items: [ItemId(3, VarDeclarator(0))]"];
-    N3["Items: [ItemId(0, ImportOfModule)]"];
-    N4["Items: [ItemId(1, VarDeclarator(0))]"];
-    N5["Items: [ItemId(2, VarDeclarator(0))]"];
+    N2["Items: [ItemId(0, ImportOfModule), ItemId(0, ImportBinding(0)), ItemId(1, VarDeclarator(0)), ItemId(2, VarDeclarator(0)), ItemId(3, VarDeclarator(0))]"];
     N1 --> N2;
     N0 --> N2;
 ```
@@ -230,7 +227,7 @@ graph TD
 ```
 {
     ModuleEvaluation: 0,
-    Exports: 6,
+    Exports: 3,
     Export(
         "run",
     ): 1,
@@ -249,20 +246,19 @@ import "__TURBOPACK_PART__" assert {
 ```
 ## Part 1
 ```js
-import { a as run } from "__TURBOPACK_PART__" assert {
+import "__TURBOPACK_PART__" assert {
     __turbopack_part__: -2
 };
+import { IPC } from "./index";
 export { run };
 
 ```
 ## Part 2
 ```js
-import { b as ipc } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -4
-};
-import { c as queue } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -5
-};
+import "./index";
+import { IPC } from "./index";
+const ipc = IPC;
+const queue = [];
 const run = async (moduleFactory)=>{
     let nextId = 1;
     const requests = new Map();
@@ -354,33 +350,21 @@ const run = async (moduleFactory)=>{
         }
     }
 };
-export { run as a } from "__TURBOPACK_VAR__" assert {
+export { IPC as a } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { ipc as b } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { queue as c } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { run as d } from "__TURBOPACK_VAR__" assert {
     __turbopack_var__: true
 };
 
 ```
 ## Part 3
-```js
-import "./index";
-
-```
-## Part 4
-```js
-const ipc = IPC;
-export { ipc as b } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 5
-```js
-const queue = [];
-export { queue as c } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 6
 ```js
 export { run } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: "export run"
@@ -400,7 +384,7 @@ import "__TURBOPACK_PART__" assert {
 ```
 {
     ModuleEvaluation: 0,
-    Exports: 6,
+    Exports: 3,
     Export(
         "run",
     ): 1,
@@ -419,20 +403,19 @@ import "__TURBOPACK_PART__" assert {
 ```
 ## Part 1
 ```js
-import { a as run } from "__TURBOPACK_PART__" assert {
+import "__TURBOPACK_PART__" assert {
     __turbopack_part__: -2
 };
+import { IPC } from "./index";
 export { run };
 
 ```
 ## Part 2
 ```js
-import { b as ipc } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -4
-};
-import { c as queue } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -5
-};
+import "./index";
+import { IPC } from "./index";
+const ipc = IPC;
+const queue = [];
 const run = async (moduleFactory)=>{
     let nextId = 1;
     const requests = new Map();
@@ -524,33 +507,21 @@ const run = async (moduleFactory)=>{
         }
     }
 };
-export { run as a } from "__TURBOPACK_VAR__" assert {
+export { IPC as a } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { ipc as b } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { queue as c } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+export { run as d } from "__TURBOPACK_VAR__" assert {
     __turbopack_var__: true
 };
 
 ```
 ## Part 3
-```js
-import "./index";
-
-```
-## Part 4
-```js
-const ipc = IPC;
-export { ipc as b } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 5
-```js
-const queue = [];
-export { queue as c } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 6
 ```js
 export { run } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: "export run"
