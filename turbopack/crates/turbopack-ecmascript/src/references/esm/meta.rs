@@ -6,7 +6,7 @@ use swc_core::{
     ecma::ast::{Expr, Ident},
     quote,
 };
-use turbo_tasks::Vc;
+use turbo_tasks::{ResolvedVc, Vc};
 use turbo_tasks_fs::FileSystemPath;
 use turbopack_core::chunk::ChunkingContext;
 
@@ -24,14 +24,17 @@ use crate::{
 #[turbo_tasks::value(shared)]
 #[derive(Hash, Debug)]
 pub struct ImportMetaBinding {
-    path: Vc<FileSystemPath>,
+    path: ResolvedVc<FileSystemPath>,
 }
 
 #[turbo_tasks::value_impl]
 impl ImportMetaBinding {
     #[turbo_tasks::function]
-    pub fn new(path: Vc<FileSystemPath>) -> Vc<Self> {
-        ImportMetaBinding { path }.cell()
+    pub async fn new(path: Vc<FileSystemPath>) -> Result<Vc<Self>> {
+        Ok(ImportMetaBinding {
+            path: path.to_resolved().await?,
+        }
+        .cell())
     }
 }
 
@@ -42,7 +45,7 @@ impl CodeGenerateable for ImportMetaBinding {
         &self,
         _context: Vc<Box<dyn ChunkingContext>>,
     ) -> Result<Vc<CodeGeneration>> {
-        let path = as_abs_path(self.path).await?.as_str().map_or_else(
+        let path = as_abs_path(*self.path).await?.as_str().map_or_else(
             || {
                 quote!(
                     "(() => { throw new Error('could not convert import.meta.url to filepath') })()"
@@ -79,13 +82,13 @@ impl CodeGenerateable for ImportMetaBinding {
 #[turbo_tasks::value(shared)]
 #[derive(Hash, Debug)]
 pub struct ImportMetaRef {
-    ast_path: Vc<AstPath>,
+    ast_path: ResolvedVc<AstPath>,
 }
 
 #[turbo_tasks::value_impl]
 impl ImportMetaRef {
     #[turbo_tasks::function]
-    pub fn new(ast_path: Vc<AstPath>) -> Vc<Self> {
+    pub fn new(ast_path: ResolvedVc<AstPath>) -> Vc<Self> {
         ImportMetaRef { ast_path }.cell()
     }
 }
