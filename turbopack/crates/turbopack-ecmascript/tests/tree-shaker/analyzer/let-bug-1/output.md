@@ -186,12 +186,12 @@ graph TD
     N5["Items: [ItemId(3, Normal)]"];
     N6["Items: [ItemId(4, Normal)]"];
     N7["Items: [ItemId(ModuleEvaluation)]"];
-    N1 --> N4;
     N0 --> N2;
-    N1 --> N2;
     N0 --> N4;
-    N0 --> N3;
     N1 --> N3;
+    N1 --> N4;
+    N1 --> N2;
+    N0 --> N3;
 ```
 # Entrypoints
 
@@ -233,13 +233,13 @@ import { b as wrapClientComponentLoader } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -5
 };
 import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 3
+};
+import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 4
 };
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 2
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
 };
 export { wrapClientComponentLoader };
 
@@ -401,13 +401,13 @@ import { b as wrapClientComponentLoader } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -5
 };
 import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 3
+};
+import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 4
 };
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 2
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
 };
 export { wrapClientComponentLoader };
 

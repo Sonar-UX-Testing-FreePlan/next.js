@@ -569,49 +569,35 @@ graph TD
     N11["Items: [ItemId(2, ImportBinding(0))]"];
     N12["Items: [ItemId(3, ImportBinding(0))]"];
     N13["Items: [ItemId(4, VarDeclarator(0)), ItemId(10, Normal), ItemId(13, Normal)]"];
-    N14["Items: [ItemId(6, Normal)]"];
-    N15["Items: [ItemId(7, Normal)]"];
-    N16["Items: [ItemId(8, Normal)]"];
-    N17["Items: [ItemId(9, Normal)]"];
-    N18["Items: [ItemId(0, ImportOfModule)]"];
-    N19["Items: [ItemId(1, ImportOfModule)]"];
-    N20["Items: [ItemId(2, ImportOfModule)]"];
-    N21["Items: [ItemId(3, ImportOfModule)]"];
-    N22["Items: [ItemId(5, Normal)]"];
+    N14["Items: [ItemId(0, ImportOfModule)]"];
+    N15["Items: [ItemId(1, ImportOfModule)]"];
+    N16["Items: [ItemId(2, ImportOfModule)]"];
+    N17["Items: [ItemId(3, ImportOfModule)]"];
+    N18["Items: [ItemId(5, Normal)]"];
+    N19["Items: [ItemId(6, Normal)]"];
+    N20["Items: [ItemId(7, Normal)]"];
+    N21["Items: [ItemId(8, Normal)]"];
+    N22["Items: [ItemId(9, Normal)]"];
     N23["Items: [ItemId(11, Normal)]"];
     N24["Items: [ItemId(12, Normal)]"];
     N25["Items: [ItemId(14, Normal)]"];
-    N6 --> N12;
-    N6 --> N13;
     N1 --> N13;
+    N6 --> N13;
+    N6 --> N10;
     N13 --> N9;
-    N7 --> N13;
+    N2 --> N13;
     N13 -.-> N12;
     N13 -.-> N11;
     N13 -.-> N10;
-    N5 --> N13;
-    N5 --> N14;
-    N6 --> N15;
-    N1 --> N16;
-    N7 --> N17;
-    N5 --> N11;
     N5 --> N12;
-    N6 --> N10;
-    N14 --> N12;
-    N14 --> N11;
-    N14 --> N13;
-    N14 --> N10;
-    N15 --> N12;
-    N15 --> N11;
-    N15 --> N13;
-    N15 --> N10;
-    N16 --> N13;
-    N17 --> N13;
+    N6 --> N12;
+    N7 --> N13;
     N2 --> N9;
-    N2 --> N13;
     N0 --> N13;
-    N5 --> N10;
+    N5 --> N11;
+    N5 --> N13;
     N6 --> N11;
+    N5 --> N10;
 ```
 # Entrypoints
 
@@ -659,7 +645,7 @@ import "__TURBOPACK_PART__" assert {
 ## Part 1
 ```js
 import { a as Postpone } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -16
+    __turbopack_part__: -21
 };
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 13
@@ -673,10 +659,10 @@ import { b as createPostponedAbortSignal } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -25
 };
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 9
+    __turbopack_part__: 13
 };
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 13
+    __turbopack_part__: 9
 };
 export { createPostponedAbortSignal };
 
@@ -684,7 +670,7 @@ export { createPostponedAbortSignal };
 ## Part 3
 ```js
 import { c as createPrerenderState } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -22
+    __turbopack_part__: -18
 };
 export { createPrerenderState };
 
@@ -700,16 +686,16 @@ export { formatDynamicAPIAccesses };
 ## Part 5
 ```js
 import { e as markCurrentScopeAsDynamic } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -14
+    __turbopack_part__: -19
 };
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 13
+    __turbopack_part__: 12
 };
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 11
 };
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 12
+    __turbopack_part__: 13
 };
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 10
@@ -720,16 +706,16 @@ export { markCurrentScopeAsDynamic };
 ## Part 6
 ```js
 import { f as trackDynamicDataAccessed } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -15
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 12
+    __turbopack_part__: -20
 };
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 13
 };
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 10
+};
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 12
 };
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 11
@@ -740,7 +726,7 @@ export { trackDynamicDataAccessed };
 ## Part 7
 ```js
 import { g as trackDynamicFetch } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -17
+    __turbopack_part__: -22
 };
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 13
@@ -831,6 +817,39 @@ export { assertPostpone as o } from "__TURBOPACK_VAR__" assert {
 ```
 ## Part 14
 ```js
+import 'react';
+
+```
+## Part 15
+```js
+import '../../client/components/hooks-server-context';
+
+```
+## Part 16
+```js
+import '../../client/components/static-generation-bailout';
+
+```
+## Part 17
+```js
+import '../../lib/url';
+
+```
+## Part 18
+```js
+function createPrerenderState(isDebugSkeleton) {
+    return {
+        isDebugSkeleton,
+        dynamicAccesses: []
+    };
+}
+export { createPrerenderState as c } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 19
+```js
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: -10
 };
@@ -869,7 +888,7 @@ export { markCurrentScopeAsDynamic as e } from "__TURBOPACK_VAR__" assert {
 };
 
 ```
-## Part 15
+## Part 20
 ```js
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: -10
@@ -909,7 +928,7 @@ export { trackDynamicDataAccessed as f } from "__TURBOPACK_VAR__" assert {
 };
 
 ```
-## Part 16
+## Part 21
 ```js
 import { n as postponeWithTracking } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -13
@@ -922,7 +941,7 @@ export { Postpone as a } from "__TURBOPACK_VAR__" assert {
 };
 
 ```
-## Part 17
+## Part 22
 ```js
 import { n as postponeWithTracking } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -13
@@ -932,39 +951,6 @@ function trackDynamicFetch(store, expression) {
     postponeWithTracking(store.prerenderState, expression, store.urlPathname);
 }
 export { trackDynamicFetch as g } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 18
-```js
-import 'react';
-
-```
-## Part 19
-```js
-import '../../client/components/hooks-server-context';
-
-```
-## Part 20
-```js
-import '../../client/components/static-generation-bailout';
-
-```
-## Part 21
-```js
-import '../../lib/url';
-
-```
-## Part 22
-```js
-function createPrerenderState(isDebugSkeleton) {
-    return {
-        isDebugSkeleton,
-        dynamicAccesses: []
-    };
-}
-export { createPrerenderState as c } from "__TURBOPACK_VAR__" assert {
     __turbopack_var__: true
 };
 
@@ -1109,10 +1095,10 @@ import "__TURBOPACK_PART__" assert {
 ## Part 1
 ```js
 import { a as Postpone } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -24
+    __turbopack_part__: -23
 };
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 16
+    __turbopack_part__: 14
 };
 export { Postpone };
 
@@ -1120,10 +1106,10 @@ export { Postpone };
 ## Part 2
 ```js
 import { b as createPostponedAbortSignal } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -18
+    __turbopack_part__: -27
 };
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 17
+    __turbopack_part__: 15
 };
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 9
@@ -1137,7 +1123,7 @@ export { createPostponedAbortSignal };
 ## Part 3
 ```js
 import { c as createPrerenderState } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -23
+    __turbopack_part__: -20
 };
 export { createPrerenderState };
 
@@ -1145,7 +1131,7 @@ export { createPrerenderState };
 ## Part 4
 ```js
 import { d as formatDynamicAPIAccesses } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -27
+    __turbopack_part__: -26
 };
 export { formatDynamicAPIAccesses };
 
@@ -1153,19 +1139,19 @@ export { formatDynamicAPIAccesses };
 ## Part 5
 ```js
 import { e as markCurrentScopeAsDynamic } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -14
+    __turbopack_part__: -21
 };
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 11
+};
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 14
 };
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 10
 };
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 12
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 16
 };
 export { markCurrentScopeAsDynamic };
 
@@ -1173,19 +1159,19 @@ export { markCurrentScopeAsDynamic };
 ## Part 6
 ```js
 import { f as trackDynamicDataAccessed } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -15
+    __turbopack_part__: -22
+};
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 10
 };
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 11
 };
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 16
+    __turbopack_part__: 14
 };
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 12
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 10
 };
 export { trackDynamicDataAccessed };
 
@@ -1193,10 +1179,10 @@ export { trackDynamicDataAccessed };
 ## Part 7
 ```js
 import { g as trackDynamicFetch } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -25
+    __turbopack_part__: -24
 };
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 16
+    __turbopack_part__: 14
 };
 export { trackDynamicFetch };
 
@@ -1204,7 +1190,7 @@ export { trackDynamicFetch };
 ## Part 8
 ```js
 import { h as usedDynamicAPIs } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -26
+    __turbopack_part__: -25
 };
 export { usedDynamicAPIs };
 
@@ -1256,6 +1242,80 @@ export { hasPostpone as m } from "__TURBOPACK_VAR__" assert {
 ## Part 14
 ```js
 import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -9
+};
+import React from 'react';
+import { n as assertPostpone } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -15
+};
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 13
+};
+function postponeWithTracking(prerenderState, expression, pathname) {
+    assertPostpone();
+    const reason = `Route ${pathname} needs to bail out of prerendering at this point because it used ${expression}. ` + `React throws this special object to indicate where. It should not be caught by ` + `your own try/catch. Learn more: https://nextjs.org/docs/messages/ppr-caught-error`;
+    prerenderState.dynamicAccesses.push({
+        stack: prerenderState.isDebugSkeleton ? new Error().stack : undefined,
+        expression
+    });
+    React.unstable_postpone(reason);
+}
+export { postponeWithTracking as o } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 15
+```js
+import { m as hasPostpone } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -13
+};
+function assertPostpone() {
+    if (!hasPostpone) {
+        throw new Error(`Invariant: React.unstable_postpone is not defined. This suggests the wrong version of React was loaded. This is a bug in Next.js`);
+    }
+}
+export { assertPostpone as n } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 16
+```js
+import 'react';
+
+```
+## Part 17
+```js
+import '../../client/components/hooks-server-context';
+
+```
+## Part 18
+```js
+import '../../client/components/static-generation-bailout';
+
+```
+## Part 19
+```js
+import '../../lib/url';
+
+```
+## Part 20
+```js
+function createPrerenderState(isDebugSkeleton) {
+    return {
+        isDebugSkeleton,
+        dynamicAccesses: []
+    };
+}
+export { createPrerenderState as c } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 21
+```js
+import "__TURBOPACK_PART__" assert {
     __turbopack_part__: -10
 };
 import { DynamicServerError } from '../../client/components/hooks-server-context';
@@ -1267,8 +1327,8 @@ import "__TURBOPACK_PART__" assert {
     __turbopack_part__: -11
 };
 import { StaticGenBailoutError } from '../../client/components/static-generation-bailout';
-import { n as postponeWithTracking } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -16
+import { o as postponeWithTracking } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -14
 };
 function markCurrentScopeAsDynamic(store, expression) {
     const pathname = getPathname(store.urlPathname);
@@ -1293,7 +1353,7 @@ export { markCurrentScopeAsDynamic as e } from "__TURBOPACK_VAR__" assert {
 };
 
 ```
-## Part 15
+## Part 22
 ```js
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: -10
@@ -1307,8 +1367,8 @@ import "__TURBOPACK_PART__" assert {
     __turbopack_part__: -11
 };
 import { StaticGenBailoutError } from '../../client/components/static-generation-bailout';
-import { n as postponeWithTracking } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -16
+import { o as postponeWithTracking } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -14
 };
 function trackDynamicDataAccessed(store, expression) {
     const pathname = getPathname(store.urlPathname);
@@ -1333,111 +1393,10 @@ export { trackDynamicDataAccessed as f } from "__TURBOPACK_VAR__" assert {
 };
 
 ```
-## Part 16
-```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -9
-};
-import React from 'react';
-import { o as assertPostpone } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -17
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 13
-};
-function postponeWithTracking(prerenderState, expression, pathname) {
-    assertPostpone();
-    const reason = `Route ${pathname} needs to bail out of prerendering at this point because it used ${expression}. ` + `React throws this special object to indicate where. It should not be caught by ` + `your own try/catch. Learn more: https://nextjs.org/docs/messages/ppr-caught-error`;
-    prerenderState.dynamicAccesses.push({
-        stack: prerenderState.isDebugSkeleton ? new Error().stack : undefined,
-        expression
-    });
-    React.unstable_postpone(reason);
-}
-export { postponeWithTracking as n } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 17
-```js
-import { m as hasPostpone } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -13
-};
-function assertPostpone() {
-    if (!hasPostpone) {
-        throw new Error(`Invariant: React.unstable_postpone is not defined. This suggests the wrong version of React was loaded. This is a bug in Next.js`);
-    }
-}
-export { assertPostpone as o } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 18
-```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -9
-};
-import React from 'react';
-import { o as assertPostpone } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -17
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 13
-};
-function createPostponedAbortSignal(reason) {
-    assertPostpone();
-    const controller = new AbortController();
-    try {
-        React.unstable_postpone(reason);
-    } catch (x) {
-        controller.abort(x);
-    }
-    return controller.signal;
-}
-export { createPostponedAbortSignal as b } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 19
-```js
-import 'react';
-
-```
-## Part 20
-```js
-import '../../client/components/hooks-server-context';
-
-```
-## Part 21
-```js
-import '../../client/components/static-generation-bailout';
-
-```
-## Part 22
-```js
-import '../../lib/url';
-
-```
 ## Part 23
 ```js
-function createPrerenderState(isDebugSkeleton) {
-    return {
-        isDebugSkeleton,
-        dynamicAccesses: []
-    };
-}
-export { createPrerenderState as c } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 24
-```js
-import { n as postponeWithTracking } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -16
+import { o as postponeWithTracking } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -14
 };
 function Postpone({ reason, prerenderState, pathname }) {
     postponeWithTracking(prerenderState, reason, pathname);
@@ -1447,10 +1406,10 @@ export { Postpone as a } from "__TURBOPACK_VAR__" assert {
 };
 
 ```
-## Part 25
+## Part 24
 ```js
-import { n as postponeWithTracking } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -16
+import { o as postponeWithTracking } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -14
 };
 function trackDynamicFetch(store, expression) {
     if (!store.prerenderState || store.isUnstableCacheCallback) return;
@@ -1461,7 +1420,7 @@ export { trackDynamicFetch as g } from "__TURBOPACK_VAR__" assert {
 };
 
 ```
-## Part 26
+## Part 25
 ```js
 function usedDynamicAPIs(prerenderState) {
     return prerenderState.dynamicAccesses.length > 0;
@@ -1471,7 +1430,7 @@ export { usedDynamicAPIs as h } from "__TURBOPACK_VAR__" assert {
 };
 
 ```
-## Part 27
+## Part 26
 ```js
 function formatDynamicAPIAccesses(prerenderState) {
     return prerenderState.dynamicAccesses.filter((access)=>typeof access.stack === 'string' && access.stack.length > 0).map(({ expression, stack })=>{
@@ -1491,6 +1450,30 @@ function formatDynamicAPIAccesses(prerenderState) {
     });
 }
 export { formatDynamicAPIAccesses as d } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 27
+```js
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -9
+};
+import React from 'react';
+import { n as assertPostpone } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -15
+};
+function createPostponedAbortSignal(reason) {
+    assertPostpone();
+    const controller = new AbortController();
+    try {
+        React.unstable_postpone(reason);
+    } catch (x) {
+        controller.abort(x);
+    }
+    return controller.signal;
+}
+export { createPostponedAbortSignal as b } from "__TURBOPACK_VAR__" assert {
     __turbopack_var__: true
 };
 

@@ -167,11 +167,6 @@ graph TD
     N3["Items: [ItemId(1, ImportOfModule)]"];
     N4["Items: [ItemId(2, ImportOfModule)]"];
     N5["Items: [ItemId(3, Normal)]"];
-    N3 --> N2;
-    N4 --> N3;
-    N4 --> N2;
-    N0 --> N4;
-    N0 --> N3;
 ```
 # Entrypoints
 
@@ -189,12 +184,6 @@ graph TD
 # Modules (dev)
 ## Part 0
 ```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 4
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
-};
 "module evaluation";
 
 ```
@@ -213,20 +202,11 @@ import 'next/server';
 ```
 ## Part 3
 ```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 2
-};
 import '../../ClientComponent';
 
 ```
 ## Part 4
 ```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 2
-};
 import 'my-module/MyModuleClientComponent';
 
 ```
@@ -252,12 +232,6 @@ export { GET } from "__TURBOPACK_PART__" assert {
 ```
 ## Merged (module eval)
 ```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 4
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
-};
 "module evaluation";
 
 ```
@@ -277,12 +251,6 @@ import "__TURBOPACK_PART__" assert {
 # Modules (prod)
 ## Part 0
 ```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 4
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
-};
 "module evaluation";
 
 ```
@@ -301,20 +269,11 @@ import 'next/server';
 ```
 ## Part 3
 ```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 2
-};
 import '../../ClientComponent';
 
 ```
 ## Part 4
 ```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 2
-};
 import 'my-module/MyModuleClientComponent';
 
 ```
@@ -340,12 +299,6 @@ export { GET } from "__TURBOPACK_PART__" assert {
 ```
 ## Merged (module eval)
 ```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 4
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
-};
 "module evaluation";
 
 ```

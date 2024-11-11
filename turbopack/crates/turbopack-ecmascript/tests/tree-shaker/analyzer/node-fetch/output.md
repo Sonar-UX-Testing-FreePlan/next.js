@@ -134,8 +134,8 @@ graph TD
     N3["Items: [ItemId(0, ImportOfModule)]"];
     N4["Items: [ItemId(1, VarDeclarator(0))]"];
     N5["Items: [ItemId(2, Normal)]"];
-    N1 --> N2;
     N0 --> N2;
+    N1 --> N2;
 ```
 # Entrypoints
 

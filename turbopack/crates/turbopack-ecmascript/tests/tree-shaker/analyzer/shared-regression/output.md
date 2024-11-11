@@ -222,14 +222,14 @@ graph TD
     N9["Items: [ItemId(2, VarDeclarator(0))]"];
     N10["Items: [ItemId(6, VarDeclarator(0))]"];
     N5 --> N4;
-    N2 --> N8;
-    N2 --> N6;
+    N0 --> N7;
     N6 --> N5;
     N6 --> N4;
     N7 --> N6;
     N7 --> N4;
     N8 --> N6;
-    N0 --> N7;
+    N2 --> N6;
+    N2 --> N8;
     N3 --> N7;
     N3 --> N4;
     N1 --> N8;
@@ -276,10 +276,10 @@ import { b as b } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -10
 };
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 8
+    __turbopack_part__: 6
 };
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 6
+    __turbopack_part__: 8
 };
 export { b };
 
@@ -441,10 +441,10 @@ import { b as b } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -10
 };
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 8
+    __turbopack_part__: 6
 };
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 6
+    __turbopack_part__: 8
 };
 export { b };
 

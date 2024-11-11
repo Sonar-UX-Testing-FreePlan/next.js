@@ -105,11 +105,9 @@ graph TD
     N0["Items: [ItemId(ModuleEvaluation)]"];
     N1["Items: [ItemId(Export((&quot;effect&quot;, #2), &quot;effect&quot;))]"];
     N2["Items: [ItemId(1, VarDeclarator(0))]"];
-    N3["Items: [ItemId(2, Normal)]"];
-    N4["Items: [ItemId(0, Normal)]"];
+    N3["Items: [ItemId(0, Normal)]"];
+    N4["Items: [ItemId(2, Normal)]"];
     N5["Items: [ItemId(Export((&quot;effects&quot;, #2), &quot;effects&quot;))]"];
-    N3 --> N2;
-    N1 --> N3;
     N1 --> N2;
 ```
 # Entrypoints
@@ -137,7 +135,7 @@ graph TD
 ## Part 1
 ```js
 import { a as effect } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -3
+    __turbopack_part__: -4
 };
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 2
@@ -155,6 +153,11 @@ export { effects as b } from "__TURBOPACK_VAR__" assert {
 ```
 ## Part 3
 ```js
+await Promise.resolve();
+
+```
+## Part 4
+```js
 import { b as effects } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -2
 };
@@ -164,11 +167,6 @@ function effect(name) {
 export { effect as a } from "__TURBOPACK_VAR__" assert {
     __turbopack_var__: true
 };
-
-```
-## Part 4
-```js
-await Promise.resolve();
 
 ```
 ## Part 5

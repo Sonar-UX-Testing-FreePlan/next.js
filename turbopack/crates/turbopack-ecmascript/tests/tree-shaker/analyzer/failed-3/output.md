@@ -977,40 +977,38 @@ graph TD
     N7["Items: [ItemId(6, VarDeclarator(0))]"];
     N8["Items: [ItemId(7, Normal)]"];
     N9["Items: [ItemId(8, VarDeclarator(0))]"];
-    N10["Items: [ItemId(15, Normal)]"];
-    N11["Items: [ItemId(16, Normal)]"];
-    N12["Items: [ItemId(17, Normal)]"];
-    N13["Items: [ItemId(18, Normal)]"];
-    N14["Items: [ItemId(19, Normal)]"];
-    N15["Items: [ItemId(20, Normal)]"];
-    N16["Items: [ItemId(21, Normal)]"];
-    N17["Items: [ItemId(22, Normal)]"];
-    N18["Items: [ItemId(23, Normal)]"];
-    N19["Items: [ItemId(24, Normal)]"];
-    N20["Items: [ItemId(0, ImportOfModule)]"];
-    N21["Items: [ItemId(1, ImportOfModule)]"];
-    N22["Items: [ItemId(2, ImportOfModule)]"];
-    N23["Items: [ItemId(4, Normal)]"];
-    N24["Items: [ItemId(5, VarDeclarator(0))]"];
-    N25["Items: [ItemId(9, Normal)]"];
-    N26["Items: [ItemId(10, Normal)]"];
-    N27["Items: [ItemId(11, Normal)]"];
-    N28["Items: [ItemId(12, Normal)]"];
-    N29["Items: [ItemId(13, Normal)]"];
-    N30["Items: [ItemId(14, Normal)]"];
-    N0 -.-> N3;
-    N19 --> N9;
-    N19 -.-> N5;
-    N18 --> N9;
-    N19 -.-> N6;
-    N19 -.-> N3;
-    N19 -.-> N4;
+    N10["Items: [ItemId(0, ImportOfModule)]"];
+    N11["Items: [ItemId(1, ImportOfModule)]"];
+    N12["Items: [ItemId(2, ImportOfModule)]"];
+    N13["Items: [ItemId(4, Normal)]"];
+    N14["Items: [ItemId(5, VarDeclarator(0))]"];
+    N15["Items: [ItemId(9, Normal)]"];
+    N16["Items: [ItemId(10, Normal)]"];
+    N17["Items: [ItemId(11, Normal)]"];
+    N18["Items: [ItemId(12, Normal)]"];
+    N19["Items: [ItemId(13, Normal)]"];
+    N20["Items: [ItemId(14, Normal)]"];
+    N21["Items: [ItemId(15, Normal)]"];
+    N22["Items: [ItemId(16, Normal)]"];
+    N23["Items: [ItemId(17, Normal)]"];
+    N24["Items: [ItemId(18, Normal)]"];
+    N25["Items: [ItemId(19, Normal)]"];
+    N26["Items: [ItemId(20, Normal)]"];
+    N27["Items: [ItemId(21, Normal)]"];
+    N28["Items: [ItemId(22, Normal)]"];
+    N29["Items: [ItemId(23, Normal)]"];
+    N30["Items: [ItemId(24, Normal)]"];
+    N7 -.-> N6;
     N0 -.-> N5;
-    N18 --> N16;
+    N1 --> N7;
+    N6 --> N5;
+    N0 --> N9;
+    N7 -.-> N3;
+    N0 -.-> N4;
+    N1 --> N8;
+    N0 -.-> N3;
     N7 -.-> N5;
     N7 -.-> N4;
-    N7 -.-> N3;
-    N7 -.-> N6;
     N8 --> N7;
     N8 -.-> N5;
     N8 -.-> N4;
@@ -1021,76 +1019,9 @@ graph TD
     N9 -.-> N4;
     N9 -.-> N3;
     N9 -.-> N6;
-    N17 --> N9;
-    N18 -.-> N6;
-    N18 -.-> N3;
-    N18 -.-> N4;
-    N18 -.-> N5;
-    N15 --> N9;
-    N17 -.-> N5;
-    N16 -.-> N6;
-    N16 -.-> N3;
-    N16 -.-> N4;
-    N16 -.-> N5;
-    N13 --> N9;
-    N15 -.-> N5;
-    N14 -.-> N6;
-    N14 -.-> N3;
-    N14 -.-> N4;
-    N14 -.-> N5;
-    N11 --> N9;
-    N13 -.-> N5;
-    N12 -.-> N6;
-    N12 -.-> N3;
-    N12 -.-> N4;
-    N12 -.-> N5;
-    N13 --> N11;
-    N11 -.-> N5;
-    N10 -.-> N6;
-    N10 -.-> N3;
-    N10 -.-> N4;
-    N10 -.-> N5;
-    N13 -.-> N4;
-    N11 -.-> N4;
-    N15 --> N13;
-    N10 --> N9;
-    N11 -.-> N6;
-    N11 -.-> N3;
-    N13 -.-> N3;
-    N11 --> N10;
-    N12 --> N9;
-    N12 --> N11;
-    N13 --> N12;
-    N13 -.-> N6;
-    N14 --> N9;
-    N14 --> N13;
-    N15 --> N14;
-    N15 -.-> N4;
-    N15 -.-> N3;
-    N15 -.-> N6;
-    N16 --> N9;
-    N16 --> N15;
-    N17 --> N16;
-    N17 -.-> N4;
-    N17 -.-> N3;
-    N17 -.-> N6;
-    N18 --> N17;
-    N19 --> N18;
-    N2 --> N6;
-    N1 --> N8;
-    N1 --> N7;
-    N6 --> N5;
     N6 --> N4;
-    N0 --> N18;
-    N0 --> N9;
-    N0 --> N19;
-    N0 -.-> N4;
     N0 -.-> N6;
-    N19 --> N17;
-    N16 --> N14;
-    N14 --> N12;
-    N17 --> N15;
-    N12 --> N10;
+    N2 --> N6;
 ```
 # Entrypoints
 
@@ -1112,22 +1043,16 @@ graph TD
 ## Part 0
 ```js
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
-};
-import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 5
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 18
 };
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 9
 };
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 19
+    __turbopack_part__: 4
 };
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 4
+    __turbopack_part__: 3
 };
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 6
@@ -1204,22 +1129,22 @@ export { structuredError as b } from "__TURBOPACK_VAR__" assert {
 ## Part 7
 ```js
 import { f as createIpc } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -23
+    __turbopack_part__: -13
 };
 import { g as PORT } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -24
+    __turbopack_part__: -14
+};
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 6
+};
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 3
 };
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 5
 };
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 4
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 6
 };
 const IPC = createIpc(parseInt(PORT, 10));
 export { IPC as a } from "__TURBOPACK_VAR__" assert {
@@ -1287,271 +1212,20 @@ export { improveConsole as h } from "__TURBOPACK_VAR__" assert {
 ```
 ## Part 10
 ```js
-import { h as improveConsole } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -9
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 6
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 4
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 5
-};
-improveConsole("groupCollapsed", "stdout", true);
+import "node:net";
 
 ```
 ## Part 11
 ```js
-import { h as improveConsole } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -9
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 5
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 4
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 6
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 10
-};
-improveConsole("table", "stdout", true);
+import "../compiled/stacktrace-parser";
 
 ```
 ## Part 12
 ```js
-import { h as improveConsole } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -9
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 6
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 4
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 5
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 11
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 10
-};
-improveConsole("debug", "stdout", true);
-
-```
-## Part 13
-```js
-import { h as improveConsole } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -9
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 5
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 11
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 4
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 12
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 6
-};
-improveConsole("info", "stdout", true);
-
-```
-## Part 14
-```js
-import { h as improveConsole } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -9
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 6
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 4
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 5
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 13
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 12
-};
-improveConsole("dir", "stdout", true);
-
-```
-## Part 15
-```js
-import { h as improveConsole } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -9
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 5
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 13
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 14
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 4
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 6
-};
-improveConsole("dirxml", "stdout", true);
-
-```
-## Part 16
-```js
-import { h as improveConsole } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -9
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 6
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 4
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 5
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 15
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 14
-};
-improveConsole("timeEnd", "stdout", true);
-
-```
-## Part 17
-```js
-import { h as improveConsole } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -9
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 5
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 16
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 4
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 6
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 15
-};
-improveConsole("timeLog", "stdout", true);
-
-```
-## Part 18
-```js
-import { h as improveConsole } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -9
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 16
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 6
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 4
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 5
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 17
-};
-improveConsole("timeStamp", "stdout", true);
-
-```
-## Part 19
-```js
-import { h as improveConsole } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -9
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 5
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 6
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 4
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 18
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 17
-};
-improveConsole("assert", "stderr", true);
-
-```
-## Part 20
-```js
-import "node:net";
-
-```
-## Part 21
-```js
-import "../compiled/stacktrace-parser";
-
-```
-## Part 22
-```js
 import "./error";
 
 ```
-## Part 23
+## Part 13
 ```js
 import { b as structuredError } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -6
@@ -1691,7 +1365,7 @@ export { createIpc as f } from "__TURBOPACK_VAR__" assert {
 };
 
 ```
-## Part 24
+## Part 14
 ```js
 const PORT = process.argv[2];
 export { PORT as g } from "__TURBOPACK_VAR__" assert {
@@ -1699,7 +1373,7 @@ export { PORT as g } from "__TURBOPACK_VAR__" assert {
 };
 
 ```
-## Part 25
+## Part 15
 ```js
 import { h as improveConsole } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -9
@@ -1707,7 +1381,7 @@ import { h as improveConsole } from "__TURBOPACK_PART__" assert {
 improveConsole("error", "stderr", true);
 
 ```
-## Part 26
+## Part 16
 ```js
 import { h as improveConsole } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -9
@@ -1715,7 +1389,7 @@ import { h as improveConsole } from "__TURBOPACK_PART__" assert {
 improveConsole("warn", "stderr", true);
 
 ```
-## Part 27
+## Part 17
 ```js
 import { h as improveConsole } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -9
@@ -1723,7 +1397,7 @@ import { h as improveConsole } from "__TURBOPACK_PART__" assert {
 improveConsole("count", "stdout", true);
 
 ```
-## Part 28
+## Part 18
 ```js
 import { h as improveConsole } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -9
@@ -1731,7 +1405,7 @@ import { h as improveConsole } from "__TURBOPACK_PART__" assert {
 improveConsole("trace", "stderr", false);
 
 ```
-## Part 29
+## Part 19
 ```js
 import { h as improveConsole } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -9
@@ -1739,12 +1413,92 @@ import { h as improveConsole } from "__TURBOPACK_PART__" assert {
 improveConsole("log", "stdout", true);
 
 ```
-## Part 30
+## Part 20
 ```js
 import { h as improveConsole } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -9
 };
 improveConsole("group", "stdout", true);
+
+```
+## Part 21
+```js
+import { h as improveConsole } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -9
+};
+improveConsole("groupCollapsed", "stdout", true);
+
+```
+## Part 22
+```js
+import { h as improveConsole } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -9
+};
+improveConsole("table", "stdout", true);
+
+```
+## Part 23
+```js
+import { h as improveConsole } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -9
+};
+improveConsole("debug", "stdout", true);
+
+```
+## Part 24
+```js
+import { h as improveConsole } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -9
+};
+improveConsole("info", "stdout", true);
+
+```
+## Part 25
+```js
+import { h as improveConsole } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -9
+};
+improveConsole("dir", "stdout", true);
+
+```
+## Part 26
+```js
+import { h as improveConsole } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -9
+};
+improveConsole("dirxml", "stdout", true);
+
+```
+## Part 27
+```js
+import { h as improveConsole } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -9
+};
+improveConsole("timeEnd", "stdout", true);
+
+```
+## Part 28
+```js
+import { h as improveConsole } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -9
+};
+improveConsole("timeLog", "stdout", true);
+
+```
+## Part 29
+```js
+import { h as improveConsole } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -9
+};
+improveConsole("timeStamp", "stdout", true);
+
+```
+## Part 30
+```js
+import { h as improveConsole } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -9
+};
+improveConsole("assert", "stderr", true);
 
 ```
 ## Part 31
@@ -1760,22 +1514,16 @@ export { structuredError } from "__TURBOPACK_PART__" assert {
 ## Merged (module eval)
 ```js
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
-};
-import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 5
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 18
 };
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 9
 };
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 19
+    __turbopack_part__: 4
 };
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 4
+    __turbopack_part__: 3
 };
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 6
@@ -1802,12 +1550,6 @@ import "__TURBOPACK_PART__" assert {
 # Modules (prod)
 ## Part 0
 ```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 16
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 17
-};
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 6
 };
@@ -1851,10 +1593,10 @@ export { structuredError as b } from "__TURBOPACK_VAR__" assert {
 ## Part 4
 ```js
 import { c as createIpc } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -21
+    __turbopack_part__: -10
 };
 import { d as PORT } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -22
+    __turbopack_part__: -11
 };
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 3
@@ -1901,165 +1643,20 @@ export { improveConsole as e } from "__TURBOPACK_VAR__" assert {
 ```
 ## Part 7
 ```js
-import { e as improveConsole } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -6
-};
-improveConsole("group", "stdout", true);
+import "node:net";
 
 ```
 ## Part 8
 ```js
-import { e as improveConsole } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -6
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 7
-};
-improveConsole("groupCollapsed", "stdout", true);
+import "../compiled/stacktrace-parser";
 
 ```
 ## Part 9
 ```js
-import { e as improveConsole } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -6
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 8
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 7
-};
-improveConsole("table", "stdout", true);
-
-```
-## Part 10
-```js
-import { e as improveConsole } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -6
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 8
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 9
-};
-improveConsole("debug", "stdout", true);
-
-```
-## Part 11
-```js
-import { e as improveConsole } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -6
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 9
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 10
-};
-improveConsole("info", "stdout", true);
-
-```
-## Part 12
-```js
-import { e as improveConsole } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -6
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 10
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 11
-};
-improveConsole("dir", "stdout", true);
-
-```
-## Part 13
-```js
-import { e as improveConsole } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -6
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 11
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 12
-};
-improveConsole("dirxml", "stdout", true);
-
-```
-## Part 14
-```js
-import { e as improveConsole } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -6
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 13
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 12
-};
-improveConsole("timeEnd", "stdout", true);
-
-```
-## Part 15
-```js
-import { e as improveConsole } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -6
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 14
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 13
-};
-improveConsole("timeLog", "stdout", true);
-
-```
-## Part 16
-```js
-import { e as improveConsole } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -6
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 14
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 15
-};
-improveConsole("timeStamp", "stdout", true);
-
-```
-## Part 17
-```js
-import { e as improveConsole } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -6
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 15
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 16
-};
-improveConsole("assert", "stderr", true);
-
-```
-## Part 18
-```js
-import "node:net";
-
-```
-## Part 19
-```js
-import "../compiled/stacktrace-parser";
-
-```
-## Part 20
-```js
 import "./error";
 
 ```
-## Part 21
+## Part 10
 ```js
 import { b as structuredError } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -3
@@ -2195,7 +1792,7 @@ export { createIpc as c } from "__TURBOPACK_VAR__" assert {
 };
 
 ```
-## Part 22
+## Part 11
 ```js
 const PORT = process.argv[2];
 export { PORT as d } from "__TURBOPACK_VAR__" assert {
@@ -2203,7 +1800,7 @@ export { PORT as d } from "__TURBOPACK_VAR__" assert {
 };
 
 ```
-## Part 23
+## Part 12
 ```js
 import { e as improveConsole } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -6
@@ -2211,7 +1808,7 @@ import { e as improveConsole } from "__TURBOPACK_PART__" assert {
 improveConsole("error", "stderr", true);
 
 ```
-## Part 24
+## Part 13
 ```js
 import { e as improveConsole } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -6
@@ -2219,7 +1816,7 @@ import { e as improveConsole } from "__TURBOPACK_PART__" assert {
 improveConsole("warn", "stderr", true);
 
 ```
-## Part 25
+## Part 14
 ```js
 import { e as improveConsole } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -6
@@ -2227,7 +1824,7 @@ import { e as improveConsole } from "__TURBOPACK_PART__" assert {
 improveConsole("count", "stdout", true);
 
 ```
-## Part 26
+## Part 15
 ```js
 import { e as improveConsole } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -6
@@ -2235,12 +1832,100 @@ import { e as improveConsole } from "__TURBOPACK_PART__" assert {
 improveConsole("trace", "stderr", false);
 
 ```
-## Part 27
+## Part 16
 ```js
 import { e as improveConsole } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -6
 };
 improveConsole("log", "stdout", true);
+
+```
+## Part 17
+```js
+import { e as improveConsole } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -6
+};
+improveConsole("group", "stdout", true);
+
+```
+## Part 18
+```js
+import { e as improveConsole } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -6
+};
+improveConsole("groupCollapsed", "stdout", true);
+
+```
+## Part 19
+```js
+import { e as improveConsole } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -6
+};
+improveConsole("table", "stdout", true);
+
+```
+## Part 20
+```js
+import { e as improveConsole } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -6
+};
+improveConsole("debug", "stdout", true);
+
+```
+## Part 21
+```js
+import { e as improveConsole } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -6
+};
+improveConsole("info", "stdout", true);
+
+```
+## Part 22
+```js
+import { e as improveConsole } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -6
+};
+improveConsole("dir", "stdout", true);
+
+```
+## Part 23
+```js
+import { e as improveConsole } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -6
+};
+improveConsole("dirxml", "stdout", true);
+
+```
+## Part 24
+```js
+import { e as improveConsole } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -6
+};
+improveConsole("timeEnd", "stdout", true);
+
+```
+## Part 25
+```js
+import { e as improveConsole } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -6
+};
+improveConsole("timeLog", "stdout", true);
+
+```
+## Part 26
+```js
+import { e as improveConsole } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -6
+};
+improveConsole("timeStamp", "stdout", true);
+
+```
+## Part 27
+```js
+import { e as improveConsole } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -6
+};
+improveConsole("assert", "stderr", true);
 
 ```
 ## Part 28
@@ -2255,12 +1940,6 @@ export { structuredError } from "__TURBOPACK_PART__" assert {
 ```
 ## Merged (module eval)
 ```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 16
-};
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 17
-};
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 6
 };

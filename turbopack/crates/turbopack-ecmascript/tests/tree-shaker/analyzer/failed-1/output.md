@@ -222,17 +222,15 @@ graph TD
     N2["Items: [ItemId(Export((&quot;sendMessage&quot;, #2), &quot;sendMessage&quot;))]"];
     N3["Items: [ItemId(0, VarDeclarator(0))]"];
     N4["Items: [ItemId(1, VarDeclarator(0))]"];
-    N5["Items: [ItemId(3, Normal)]"];
-    N6["Items: [ItemId(2, Normal)]"];
+    N5["Items: [ItemId(2, Normal)]"];
+    N6["Items: [ItemId(3, Normal)]"];
     N7["Items: [ItemId(4, Normal)]"];
     N8["Items: [ItemId(5, Normal)]"];
     N9["Items: [ItemId(ModuleEvaluation)]"];
-    N0 --> N5;
-    N1 --> N3;
-    N0 --> N4;
-    N5 --> N4;
     N2 --> N3;
     N1 --> N4;
+    N1 --> N3;
+    N0 --> N4;
 ```
 # Entrypoints
 
@@ -257,7 +255,7 @@ graph TD
 ## Part 0
 ```js
 import { a as addMessageListener } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -5
+    __turbopack_part__: -6
 };
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 4
@@ -271,10 +269,10 @@ import { b as connectHMR } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -8
 };
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
+    __turbopack_part__: 4
 };
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 4
+    __turbopack_part__: 3
 };
 export { connectHMR };
 
@@ -308,19 +306,6 @@ export { eventCallbacks as e } from "__TURBOPACK_VAR__" assert {
 ```
 ## Part 5
 ```js
-import { e as eventCallbacks } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -4
-};
-function addMessageListener(cb) {
-    eventCallbacks.push(cb);
-}
-export { addMessageListener as a } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 6
-```js
 function getSocketProtocol(assetPrefix) {
     let protocol = location.protocol;
     try {
@@ -329,6 +314,19 @@ function getSocketProtocol(assetPrefix) {
     return protocol === "http:" ? "ws" : "wss";
 }
 export { getSocketProtocol as f } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 6
+```js
+import { e as eventCallbacks } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -4
+};
+function addMessageListener(cb) {
+    eventCallbacks.push(cb);
+}
+export { addMessageListener as a } from "__TURBOPACK_VAR__" assert {
     __turbopack_var__: true
 };
 
@@ -350,7 +348,7 @@ export { sendMessage as c } from "__TURBOPACK_VAR__" assert {
 ## Part 8
 ```js
 import { f as getSocketProtocol } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -6
+    __turbopack_part__: -5
 };
 import { d as source } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -3
@@ -450,7 +448,7 @@ export { sendMessage } from "__TURBOPACK_PART__" assert {
 ## Part 0
 ```js
 import { a as addMessageListener } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -5
+    __turbopack_part__: -6
 };
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 4
@@ -464,10 +462,10 @@ import { b as connectHMR } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -8
 };
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
+    __turbopack_part__: 4
 };
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 4
+    __turbopack_part__: 3
 };
 export { connectHMR };
 
@@ -501,19 +499,6 @@ export { eventCallbacks as e } from "__TURBOPACK_VAR__" assert {
 ```
 ## Part 5
 ```js
-import { e as eventCallbacks } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -4
-};
-function addMessageListener(cb) {
-    eventCallbacks.push(cb);
-}
-export { addMessageListener as a } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 6
-```js
 function getSocketProtocol(assetPrefix) {
     let protocol = location.protocol;
     try {
@@ -522,6 +507,19 @@ function getSocketProtocol(assetPrefix) {
     return protocol === "http:" ? "ws" : "wss";
 }
 export { getSocketProtocol as f } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 6
+```js
+import { e as eventCallbacks } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -4
+};
+function addMessageListener(cb) {
+    eventCallbacks.push(cb);
+}
+export { addMessageListener as a } from "__TURBOPACK_VAR__" assert {
     __turbopack_var__: true
 };
 
@@ -543,7 +541,7 @@ export { sendMessage as c } from "__TURBOPACK_VAR__" assert {
 ## Part 8
 ```js
 import { f as getSocketProtocol } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -6
+    __turbopack_part__: -5
 };
 import { d as source } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -3

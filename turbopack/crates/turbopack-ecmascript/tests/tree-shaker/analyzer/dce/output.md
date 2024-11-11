@@ -81,9 +81,8 @@ graph TD
 ```mermaid
 graph TD
     N0["Items: [ItemId(ModuleEvaluation)]"];
-    N1["Items: [ItemId(1, Normal)]"];
-    N2["Items: [ItemId(0, ImportOfModule)]"];
-    N0 --> N1;
+    N1["Items: [ItemId(0, ImportOfModule)]"];
+    N2["Items: [ItemId(1, Normal)]"];
 ```
 # Entrypoints
 
@@ -98,22 +97,19 @@ graph TD
 # Modules (dev)
 ## Part 0
 ```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 1
-};
 "module evaluation";
 
 ```
 ## Part 1
 ```js
-if (1 + 1 == 3) {
-    baz();
-}
+import './module';
 
 ```
 ## Part 2
 ```js
-import './module';
+if (1 + 1 == 3) {
+    baz();
+}
 
 ```
 ## Part 3
@@ -122,9 +118,6 @@ import './module';
 ```
 ## Merged (module eval)
 ```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 1
-};
 "module evaluation";
 
 ```
@@ -141,22 +134,19 @@ import "__TURBOPACK_PART__" assert {
 # Modules (prod)
 ## Part 0
 ```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 1
-};
 "module evaluation";
 
 ```
 ## Part 1
 ```js
-if (1 + 1 == 3) {
-    baz();
-}
+import './module';
 
 ```
 ## Part 2
 ```js
-import './module';
+if (1 + 1 == 3) {
+    baz();
+}
 
 ```
 ## Part 3
@@ -165,9 +155,6 @@ import './module';
 ```
 ## Merged (module eval)
 ```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 1
-};
 "module evaluation";
 
 ```

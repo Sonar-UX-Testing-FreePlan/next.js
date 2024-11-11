@@ -360,32 +360,29 @@ graph TD
     N9["Items: [ItemId(4, VarDeclarator(0))]"];
     N10["Items: [ItemId(5, VarDeclarator(0))]"];
     N11["Items: [ItemId(6, VarDeclarator(0))]"];
-    N12["Items: [ItemId(7, VarDeclarator(0))]"];
-    N13["Items: [ItemId(8, VarDeclarator(0))]"];
-    N14["Items: [ItemId(0, ImportOfModule)]"];
-    N15["Items: [ItemId(1, ImportOfModule)]"];
-    N16["Items: [ItemId(2, VarDeclarator(0))]"];
+    N12["Items: [ItemId(8, VarDeclarator(0))]"];
+    N13["Items: [ItemId(0, ImportOfModule)]"];
+    N14["Items: [ItemId(1, ImportOfModule)]"];
+    N15["Items: [ItemId(2, VarDeclarator(0))]"];
+    N16["Items: [ItemId(7, VarDeclarator(0))]"];
     N0 --> N11;
     N9 --> N7;
-    N1 --> N10;
-    N1 --> N11;
+    N5 --> N12;
+    N2 --> N11;
     N9 --> N8;
     N4 --> N10;
     N10 --> N9;
     N10 --> N7;
     N10 --> N8;
     N11 --> N9;
-    N12 --> N11;
+    N1 --> N10;
+    N1 --> N11;
+    N12 --> N9;
+    N12 --> N8;
+    N12 --> N6;
     N12 --> N10;
-    N13 --> N9;
-    N13 --> N8;
-    N13 --> N6;
-    N13 --> N10;
-    N13 --> N7;
-    N3 --> N13;
-    N1 --> N12;
-    N2 --> N11;
-    N5 --> N13;
+    N12 --> N7;
+    N3 --> N12;
     N5 --> N6;
 ```
 # Entrypoints
@@ -425,7 +422,7 @@ import "__TURBOPACK_PART__" assert {
 ## Part 1
 ```js
 import { a as customAlphabet } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -12
+    __turbopack_part__: -16
 };
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 10
@@ -447,7 +444,7 @@ export { customRandom };
 ## Part 3
 ```js
 import { c as nanoid } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -13
+    __turbopack_part__: -12
 };
 export { nanoid };
 
@@ -467,7 +464,7 @@ import "__TURBOPACK_PART__" assert {
 };
 import { urlAlphabet } from './url-alphabet/index.js';
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 13
+    __turbopack_part__: 12
 };
 export { urlAlphabet };
 
@@ -502,7 +499,7 @@ import { f as pool } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -7
 };
 import { h as POOL_SIZE_MULTIPLIER } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -16
+    __turbopack_part__: -15
 };
 import { g as poolOffset } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -8
@@ -570,20 +567,6 @@ export { customRandom as b } from "__TURBOPACK_VAR__" assert {
 ```
 ## Part 12
 ```js
-import { b as customRandom } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -11
-};
-import { d as random } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -10
-};
-let customAlphabet = (alphabet, size)=>customRandom(alphabet, size, random);
-export { customAlphabet as a } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 13
-```js
 import { i as fillPool } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -9
 };
@@ -613,20 +596,34 @@ export { nanoid as c } from "__TURBOPACK_VAR__" assert {
 };
 
 ```
-## Part 14
+## Part 13
 ```js
 import 'crypto';
 
 ```
-## Part 15
+## Part 14
 ```js
 import './url-alphabet/index.js';
 
 ```
-## Part 16
+## Part 15
 ```js
 const POOL_SIZE_MULTIPLIER = 128;
 export { POOL_SIZE_MULTIPLIER as h } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 16
+```js
+import { b as customRandom } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -11
+};
+import { d as random } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -10
+};
+let customAlphabet = (alphabet, size)=>customRandom(alphabet, size, random);
+export { customAlphabet as a } from "__TURBOPACK_VAR__" assert {
     __turbopack_var__: true
 };
 
@@ -695,7 +692,7 @@ import "__TURBOPACK_PART__" assert {
 ## Part 1
 ```js
 import { a as customAlphabet } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -12
+    __turbopack_part__: -16
 };
 import "__TURBOPACK_PART__" assert {
     __turbopack_part__: 10
@@ -717,7 +714,7 @@ export { customRandom };
 ## Part 3
 ```js
 import { c as nanoid } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -13
+    __turbopack_part__: -12
 };
 export { nanoid };
 
@@ -737,7 +734,7 @@ import "__TURBOPACK_PART__" assert {
 };
 import { urlAlphabet } from './url-alphabet/index.js';
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 13
+    __turbopack_part__: 12
 };
 export { urlAlphabet };
 
@@ -772,7 +769,7 @@ import { f as pool } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -7
 };
 import { h as POOL_SIZE_MULTIPLIER } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -16
+    __turbopack_part__: -15
 };
 import { g as poolOffset } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -8
@@ -840,20 +837,6 @@ export { customRandom as b } from "__TURBOPACK_VAR__" assert {
 ```
 ## Part 12
 ```js
-import { b as customRandom } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -11
-};
-import { d as random } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -10
-};
-let customAlphabet = (alphabet, size)=>customRandom(alphabet, size, random);
-export { customAlphabet as a } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 13
-```js
 import { i as fillPool } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -9
 };
@@ -883,20 +866,34 @@ export { nanoid as c } from "__TURBOPACK_VAR__" assert {
 };
 
 ```
-## Part 14
+## Part 13
 ```js
 import 'crypto';
 
 ```
-## Part 15
+## Part 14
 ```js
 import './url-alphabet/index.js';
 
 ```
-## Part 16
+## Part 15
 ```js
 const POOL_SIZE_MULTIPLIER = 128;
 export { POOL_SIZE_MULTIPLIER as h } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
+## Part 16
+```js
+import { b as customRandom } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -11
+};
+import { d as random } from "__TURBOPACK_PART__" assert {
+    __turbopack_part__: -10
+};
+let customAlphabet = (alphabet, size)=>customRandom(alphabet, size, random);
+export { customAlphabet as a } from "__TURBOPACK_VAR__" assert {
     __turbopack_var__: true
 };
 

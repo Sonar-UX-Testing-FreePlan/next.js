@@ -119,10 +119,9 @@ graph TD
     N0["Items: [ItemId(ModuleEvaluation)]"];
     N1["Items: [ItemId(Export((&quot;GET&quot;, #2), &quot;GET&quot;))]"];
     N2["Items: [ItemId(Export((&quot;runtime&quot;, #2), &quot;runtime&quot;))]"];
-    N3["Items: [ItemId(1, VarDeclarator(0))]"];
-    N4["Items: [ItemId(0, ImportOfModule)]"];
+    N3["Items: [ItemId(0, ImportOfModule)]"];
+    N4["Items: [ItemId(1, VarDeclarator(0))]"];
     N5["Items: [ItemId(2, VarDeclarator(0))]"];
-    N1 --> N3;
 ```
 # Entrypoints
 
@@ -149,7 +148,7 @@ graph TD
 ## Part 1
 ```js
 import { a as GET } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -3
+    __turbopack_part__: -4
 };
 export { GET };
 
@@ -164,6 +163,11 @@ export { runtime };
 ```
 ## Part 3
 ```js
+import "next/server";
+
+```
+## Part 4
+```js
 const GET = (req)=>{
     return NextResponse.json({
         pathname: req.nextUrl.pathname
@@ -172,11 +176,6 @@ const GET = (req)=>{
 export { GET as a } from "__TURBOPACK_VAR__" assert {
     __turbopack_var__: true
 };
-
-```
-## Part 4
-```js
-import "next/server";
 
 ```
 ## Part 5
@@ -227,7 +226,7 @@ export { runtime } from "__TURBOPACK_PART__" assert {
 ## Part 1
 ```js
 import { a as GET } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -3
+    __turbopack_part__: -4
 };
 export { GET };
 
@@ -242,6 +241,11 @@ export { runtime };
 ```
 ## Part 3
 ```js
+import "next/server";
+
+```
+## Part 4
+```js
 const GET = (req)=>{
     return NextResponse.json({
         pathname: req.nextUrl.pathname
@@ -250,11 +254,6 @@ const GET = (req)=>{
 export { GET as a } from "__TURBOPACK_VAR__" assert {
     __turbopack_var__: true
 };
-
-```
-## Part 4
-```js
-import "next/server";
 
 ```
 ## Part 5
