@@ -45,7 +45,6 @@ graph TD
 graph TD
     N0["Items: [ItemId(ModuleEvaluation)]"];
     N1["Items: [ItemId(0, Normal)]"];
-    N0 --> N1;
 ```
 # Entrypoints
 
@@ -60,9 +59,6 @@ graph TD
 # Modules (dev)
 ## Part 0
 ```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 1
-};
 "module evaluation";
 
 ```
@@ -77,9 +73,6 @@ process.turbopack = {};
 ```
 ## Merged (module eval)
 ```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 1
-};
 "module evaluation";
 
 ```
@@ -96,9 +89,6 @@ import "__TURBOPACK_PART__" assert {
 # Modules (prod)
 ## Part 0
 ```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 1
-};
 "module evaluation";
 
 ```
@@ -113,9 +103,6 @@ process.turbopack = {};
 ```
 ## Merged (module eval)
 ```js
-import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 1
-};
 "module evaluation";
 
 ```

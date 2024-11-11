@@ -84,8 +84,6 @@ graph TD
     N2["Items: [ItemId(0, VarDeclarator(0))]"];
     N3["Items: [ItemId(1, VarDeclarator(0))]"];
     N4["Items: [ItemId(ModuleEvaluation)]"];
-    N0 --> N2;
-    N1 --> N3;
 ```
 # Entrypoints
 

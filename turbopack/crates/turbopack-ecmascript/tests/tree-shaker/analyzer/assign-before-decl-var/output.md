@@ -82,8 +82,7 @@ graph TD
     N2["Items: [ItemId(1, VarDeclarator(0))]"];
     N3["Items: [ItemId(2, Normal)]"];
     N1 --> N2;
-    N3 --> N2;
-    N0 --> N3;
+    N0 --> N2;
 ```
 # Entrypoints
 
@@ -99,7 +98,7 @@ graph TD
 ## Part 0
 ```js
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
+    __turbopack_part__: 2
 };
 "module evaluation";
 
@@ -135,7 +134,7 @@ console.log(a);
 ## Merged (module eval)
 ```js
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
+    __turbopack_part__: 2
 };
 "module evaluation";
 
@@ -154,7 +153,7 @@ import "__TURBOPACK_PART__" assert {
 ## Part 0
 ```js
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
+    __turbopack_part__: 2
 };
 "module evaluation";
 
@@ -190,7 +189,7 @@ console.log(a);
 ## Merged (module eval)
 ```js
 import "__TURBOPACK_PART__" assert {
-    __turbopack_part__: 3
+    __turbopack_part__: 2
 };
 "module evaluation";
 

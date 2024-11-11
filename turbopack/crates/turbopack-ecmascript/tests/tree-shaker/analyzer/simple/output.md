@@ -121,15 +121,14 @@ graph TD
     N0["Items: [ItemId(Export((&quot;CHIMERA&quot;, #2), &quot;CHIMERA&quot;))]"];
     N1["Items: [ItemId(Export((&quot;DOG&quot;, #2), &quot;DOG&quot;))]"];
     N2["Items: [ItemId(0, VarDeclarator(0))]"];
-    N3["Items: [ItemId(1, VarDeclarator(0))]"];
-    N4["Items: [ItemId(2, VarDeclarator(0))]"];
+    N3["Items: [ItemId(2, VarDeclarator(0))]"];
+    N4["Items: [ItemId(1, VarDeclarator(0))]"];
     N5["Items: [ItemId(3, VarDeclarator(0))]"];
     N6["Items: [ItemId(ModuleEvaluation)]"];
-    N4 --> N2;
-    N5 --> N3;
-    N5 --> N2;
-    N1 --> N4;
-    N0 --> N5;
+    N3 --> N2;
+    N1 --> N2;
+    N0 --> N2;
+    N1 --> N3;
 ```
 # Entrypoints
 
@@ -153,13 +152,19 @@ graph TD
 import { a as CHIMERA } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -5
 };
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 2
+};
 export { CHIMERA };
 
 ```
 ## Part 1
 ```js
 import { b as DOG } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -4
+    __turbopack_part__: -3
+};
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 2
 };
 export { DOG };
 
@@ -174,14 +179,6 @@ export { dog as c } from "__TURBOPACK_VAR__" assert {
 ```
 ## Part 3
 ```js
-const cat = "cat";
-export { cat as d } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 4
-```js
 import { c as dog } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -2
 };
@@ -191,10 +188,18 @@ export { DOG as b } from "__TURBOPACK_VAR__" assert {
 };
 
 ```
+## Part 4
+```js
+const cat = "cat";
+export { cat as d } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
 ## Part 5
 ```js
 import { d as cat } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -3
+    __turbopack_part__: -4
 };
 import { c as dog } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -2
@@ -247,13 +252,19 @@ export { DOG } from "__TURBOPACK_PART__" assert {
 import { a as CHIMERA } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -5
 };
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 2
+};
 export { CHIMERA };
 
 ```
 ## Part 1
 ```js
 import { b as DOG } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -4
+    __turbopack_part__: -3
+};
+import "__TURBOPACK_PART__" assert {
+    __turbopack_part__: 2
 };
 export { DOG };
 
@@ -268,14 +279,6 @@ export { dog as c } from "__TURBOPACK_VAR__" assert {
 ```
 ## Part 3
 ```js
-const cat = "cat";
-export { cat as d } from "__TURBOPACK_VAR__" assert {
-    __turbopack_var__: true
-};
-
-```
-## Part 4
-```js
 import { c as dog } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -2
 };
@@ -285,10 +288,18 @@ export { DOG as b } from "__TURBOPACK_VAR__" assert {
 };
 
 ```
+## Part 4
+```js
+const cat = "cat";
+export { cat as d } from "__TURBOPACK_VAR__" assert {
+    __turbopack_var__: true
+};
+
+```
 ## Part 5
 ```js
 import { d as cat } from "__TURBOPACK_PART__" assert {
-    __turbopack_part__: -3
+    __turbopack_part__: -4
 };
 import { c as dog } from "__TURBOPACK_PART__" assert {
     __turbopack_part__: -2
